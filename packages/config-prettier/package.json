@@ -1,0 +1,43 @@
+{
+	"name": "@aetherjs/config-prettier",
+	"description": "Standard Prettier config for AetherJS",
+	"author": "@aetherjs",
+	"version": "0.0.1",
+	"license": "MIT",
+	"sideEffects": false,
+	"main": "dist/index.js",
+	"exports": {
+		"import": "./dist/index.js",
+		"require": "./dist/index.js",
+		"types": "./dist/index.d.ts"
+	},
+	"scripts": {
+		"test": "vitest run",
+		"lint": "yarn test && yarn build && eslint src tests --ext ts --fix -c ../../.eslintrc",
+		"build": "tsup",
+		"prepack": "yarn build",
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.con/aether-development/utilities.git",
+		"directory": "packages/config-prettier"
+	},
+	"files": [
+		"dist/**/*.js*",
+		"dist/**/*.mjs*",
+		"dist/**/*.d*"
+	],
+	"dependencies": {
+		"prettier": "^2.7.1"
+	},
+	"devDependencies": {
+		"@aetherjs/config-tsconfig": "*",
+		"@aetherjs/config-eslint": "*",
+		"tsup": "^6.1.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

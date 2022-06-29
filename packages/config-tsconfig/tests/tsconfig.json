@@ -1,0 +1,11 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"lib": ["ESNext", "DOM"],
+		"outDir": "../build",
+		"rootDir": "./",
+		"tsBuildInfoFile": "../build/test.tsbuildinfo",
+		"types": ["vitest/globals"]
+	},
+	"include": ["./"]
+}

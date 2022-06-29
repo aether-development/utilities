@@ -1,0 +1,12 @@
+{
+	"root": true,
+	"extends": ["./packages/config-eslint/dist/index.js"],
+	"overrides": [
+		{
+			"files": ["*.test.ts"],
+			"rules": {
+				"@typescript-eslint/no-extraneous-class": "off"
+			}
+		}
+	]
+}

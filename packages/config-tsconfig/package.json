@@ -1,0 +1,34 @@
+{
+	"name": "@aetherjs/config-tsconfig",
+	"description": "Standard Typescript config for AetherJS",
+	"author": "@aetherjs",
+	"version": "0.0.0",
+	"license": "MIT",
+	"sideEffects": false,
+	"main": "tsconfig.json",
+	"exports": {
+		"import": "./tsconfig.json",
+		"require": "./tsconfig.json"
+	},
+	"scripts": {
+		"test": "vitest run",
+		"lint": "eslint tests --ext mjs,ts --fix -c ../../.eslintrc",
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.con/aether-development/utilities.git",
+		"directory": "packages/config-tsconfig"
+	},
+	"files": [
+		"tsconfig.json"
+	],
+	"dependencies": {
+		"tslib": "^2.4.0",
+		"typescript": "^4.7.4"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

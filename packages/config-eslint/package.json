@@ -1,0 +1,48 @@
+{
+	"name": "@aetherjs/config-eslint",
+	"description": "Standard ESLint config for AetherJS",
+	"author": "@aetherjs",
+	"version": "0.0.0",
+	"license": "MIT",
+	"sideEffects": false,
+	"main": "dist/index.js",
+	"exports": {
+		"import": "./dist/index.js",
+		"require": "./dist/index.js",
+		"types": "./dist/index.d.ts"
+	},
+	"scripts": {
+		"test": "vitest run",
+		"prelint": "yarn test && yarn build",
+		"build": "tsup",
+		"prepack": "yarn build",
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.con/aether-development/utilities.git",
+		"directory": "packages/config-eslint"
+	},
+	"files": [
+		"dist/**/*.js*",
+		"dist/**/*.mjs*",
+		"dist/**/*.d*"
+	],
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"eslint": "^8.18.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.1.0",
+		"prettier": "^2.7.1",
+		"typescript": "^4.7.4"
+	},
+	"devDependencies": {
+		"@aetherjs/config-tsconfig": "*",
+		"tsup": "^6.1.2"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

@@ -1,0 +1,29 @@
+// Vitest Snapshot v1
+
+exports[`ESLint Config > should export rules 1`] = `
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2017": true,
+    "es2020": true,
+    "es6": true,
+    "jest": true,
+    "node": true,
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "extraFileExtensions": [
+      ".mjs",
+    ],
+    "project": "./tsconfig.eslint.json",
+    "sourceType": "module",
+  },
+  "root": true,
+}
+`;

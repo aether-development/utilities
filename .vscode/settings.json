@@ -1,0 +1,15 @@
+{
+	"eslint.validate": ["typescript"],
+	"editor.tabSize": 4,
+	"editor.useTabStops": true,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"files.eol": "\n",
+	"cSpell.words": ["aetherjs"],
+	"files.exclude": {
+		"**/node_modules": true,
+		"**/coverage": true,
+		"**/.turbo": true,
+		"**/.git": true
+	}
+}
