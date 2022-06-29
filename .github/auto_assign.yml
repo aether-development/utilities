@@ -1,0 +1,5 @@
+addReviewers: true
+reviewers:
+  - Zendrex
+numberOfReviewers: 0
+runOnDraft: true
