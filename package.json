@@ -19,7 +19,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
 		"@commitlint/config-conventional": "^17.0.3",
-		"@favware/cliff-jumper": "^1.8.4",
+		"@favware/cliff-jumper": "^1.8.5",
 		"c8": "^7.11.3",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.18.0",
