@@ -8,16 +8,17 @@
 		"clean": "node scripts/clean.mjs",
 		"clean:full": "node scripts/clean-full.mjs",
 		"lint": "turbo run lint",
-		"format": "prettier --write \"packages/**/{src,scripts}/**/*.{mjs,ts,js}\"",
 		"test": "vitest run",
 		"build": "turbo run build",
+		"changelog": "turbo run changelog",
 		"update": "yarn upgrade-interactive",
 		"postinstall": "husky install .github/husky",
-		"check-update": "turbo run check-update"
+		"format": "prettier --write \"packages/**/{src,scripts}/**/*.{mjs,ts,js}\""
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
 		"@commitlint/config-conventional": "^17.0.3",
+		"@favware/cliff-jumper": "^1.8.4",
 		"c8": "^7.11.3",
 		"eslint": "^8.18.0",
 		"husky": "^8.0.1",
