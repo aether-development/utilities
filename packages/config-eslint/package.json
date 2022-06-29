@@ -13,11 +13,11 @@
 	},
 	"scripts": {
 		"test": "vitest run",
-		"prelint": "yarn test && yarn build",
 		"build": "tsup",
 		"prepack": "yarn build",
-		"bump": "cliff-jumper",
-		"check-update": "cliff-jumper --dry-run"
+		"release": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run",
+		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/config-eslint/*'"
 	},
 	"repository": {
 		"type": "git",
