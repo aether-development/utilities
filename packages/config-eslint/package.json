@@ -2,7 +2,7 @@
 	"name": "@aetherjs/config-eslint",
 	"description": "Standard ESLint config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "dist/index.js",
@@ -16,8 +16,7 @@
 		"build": "tsup",
 		"prepack": "yarn build",
 		"release": "cliff-jumper",
-		"check-update": "cliff-jumper --dry-run",
-		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/config-eslint/*'"
+		"check-update": "cliff-jumper --dry-run"
 	},
 	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/config-eslint",
 	"repository": {
