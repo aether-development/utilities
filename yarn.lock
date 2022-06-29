@@ -5,11 +5,11 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@aetherjs/config-eslint@*, @aetherjs/config-eslint@workspace:packages/config-eslint":
+"@aetherjs/config-eslint@workspace:^, @aetherjs/config-eslint@workspace:packages/config-eslint":
   version: 0.0.0-use.local
   resolution: "@aetherjs/config-eslint@workspace:packages/config-eslint"
   dependencies:
-    "@aetherjs/config-typescript": "*"
+    "@aetherjs/config-typescript": "workspace:^"
     "@typescript-eslint/eslint-plugin": ^5.30.0
     "@typescript-eslint/parser": ^5.30.0
     eslint: ^8.18.0
@@ -25,14 +25,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@aetherjs/config-prettier@workspace:packages/config-prettier"
   dependencies:
-    "@aetherjs/config-eslint": "*"
-    "@aetherjs/config-typescript": "*"
+    "@aetherjs/config-eslint": "workspace:^"
+    "@aetherjs/config-typescript": "workspace:^"
     prettier: ^2.7.1
     tsup: ^6.1.2
   languageName: unknown
   linkType: soft
 
-"@aetherjs/config-typescript@*, @aetherjs/config-typescript@workspace:packages/config-typescript":
+"@aetherjs/config-typescript@workspace:^, @aetherjs/config-typescript@workspace:packages/config-typescript":
   version: 0.0.0-use.local
   resolution: "@aetherjs/config-typescript@workspace:packages/config-typescript"
   dependencies:
@@ -3573,7 +3573,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@latest, prettier@npm:^2.7.1":
+"prettier@npm:^2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
   bin:
@@ -3845,11 +3845,11 @@ __metadata:
     eslint: ^8.18.0
     husky: ^8.0.1
     lint-staged: ^13.0.3
-    prettier: latest
+    prettier: ^2.7.1
     pretty-quick: ^3.1.3
     rimraf: ^3.0.2
     tsup: ^6.1.2
-    turbo: latest
+    turbo: ^1.3.1
     vitest: ^0.16.0
   languageName: unknown
   linkType: soft
@@ -4540,7 +4540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-turbo@latest:
+"turbo@npm:^1.3.1":
   version: 1.3.1
   resolution: "turbo@npm:1.3.1"
   dependencies:
