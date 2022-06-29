@@ -10,7 +10,6 @@
 		"lint": "turbo run lint",
 		"test": "vitest run",
 		"build": "turbo run build",
-		"changelog": "turbo run changelog",
 		"update": "yarn upgrade-interactive",
 		"check-update": "turbo run check-update",
 		"postinstall": "husky install .github/husky",
