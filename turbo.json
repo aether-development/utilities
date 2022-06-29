@@ -19,6 +19,10 @@
 		"check-update": {
 			"dependsOn": [],
 			"outputs": []
+		},
+		"cl": {
+			"dependsOn": [],
+			"outputs": []
 		}
 	}
 }

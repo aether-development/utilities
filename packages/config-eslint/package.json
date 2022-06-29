@@ -16,7 +16,7 @@
 		"build": "tsup",
 		"prepack": "yarn build",
 		"bump": "cliff-jumper",
-		"check-update": "cliff-jumper --dry-run"
+		"check-update": "cliff-jumper --dry-run --latest"
 	},
 	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/config-eslint",
 	"repository": {
