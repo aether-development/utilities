@@ -1,0 +1,6 @@
+- name: "Packages: config-eslint"
+  color: "fbca04"
+- name: "Packages: config-prettier"
+  color: "fbca04"
+- name: "Packages: config-typescript"
+  color: "fbca04"

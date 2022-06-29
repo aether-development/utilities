@@ -1,6 +1,6 @@
 <div align="center">
 
-# @aetherjs/config-tsconfig
+# @aetherjs/config-typescript
 
 **Typescript configuration for AetherJS projects.**
 

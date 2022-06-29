@@ -1,5 +1,5 @@
 {
-	"name": "@aetherjs/config-tsconfig",
+	"name": "@aetherjs/config-typescript",
 	"description": "Standard Typescript config for AetherJS",
 	"author": "@aetherjs",
 	"version": "0.0.0",
