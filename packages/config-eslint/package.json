@@ -2,7 +2,7 @@
 	"name": "@aetherjs/config-eslint",
 	"description": "Standard ESLint config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.0.3",
+	"version": "0.0.0",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "dist/index.js",
@@ -19,11 +19,21 @@
 		"check-update": "cliff-jumper --dry-run",
 		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/config-eslint/*'"
 	},
+	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/config-eslint",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.con/aether-development/utilities.git",
 		"directory": "packages/config-eslint"
 	},
+	"keywords": [
+		"aether-development",
+		"aetherjs",
+		"typescript",
+		"ts",
+		"yarn",
+		"discord",
+		"standalone"
+	],
 	"files": [
 		"dist/**/*.js*",
 		"dist/**/*.mjs*",

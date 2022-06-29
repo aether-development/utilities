@@ -8,12 +8,12 @@
 		"clean": "node scripts/clean.mjs",
 		"clean:full": "node scripts/clean-full.mjs",
 		"lint": "turbo run lint",
-		"format": "prettier --write \"packages/**/{src,scripts}/**/*.{mjs,ts,js}\"",
 		"test": "vitest run",
 		"build": "turbo run build",
+		"changelog": "turbo run changelog",
 		"update": "yarn upgrade-interactive",
 		"postinstall": "husky install .github/husky",
-		"check-update": "turbo run check-update"
+		"format": "prettier --write \"packages/**/{src,scripts}/**/*.{mjs,ts,js}\""
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",
