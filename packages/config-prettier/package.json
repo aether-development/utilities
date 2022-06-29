@@ -2,7 +2,7 @@
 	"name": "@aetherjs/config-prettier",
 	"description": "Standard Prettier config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "dist/index.js",
