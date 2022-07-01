@@ -2,7 +2,7 @@
 	"name": "@aetherjs/ts-config",
 	"description": "Standard Typescript config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.1.2",
+	"version": "0.1.1",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "tsconfig.json",
