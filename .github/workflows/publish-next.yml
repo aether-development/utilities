@@ -47,7 +47,7 @@ jobs:
         run: yarn build --cache-dir=".turbo"
 
       - name: Deprecate Old Versions
-        run: yarn npm-deprecate --name "*next*" --package "${{ matrix.package }}"
+        run: yarn npm-deprecate --name "*next*" --package "${{ matrix.package }}" --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
