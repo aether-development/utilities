@@ -2,7 +2,7 @@
 	"name": "@aetherjs/eslint-config",
 	"description": "Standard ESLint config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.0.5",
+	"version": "0.0.5-next",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "dist/index.js",
