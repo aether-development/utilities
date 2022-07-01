@@ -1,6 +1,6 @@
 <div align="center">
 
-# @aetherjs/config-eslint
+# @aetherjs/eslint-config
 
 **ESLint configuration for <u>Aether Development</u> projects.**
 

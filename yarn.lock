@@ -5,11 +5,11 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@aetherjs/eslint-config@workspace:^, @aetherjs/eslint-config@workspace:packages/eslint-config":
+"@aetherjs/eslint-config@workspace:packages/eslint-config":
   version: 0.0.0-use.local
   resolution: "@aetherjs/eslint-config@workspace:packages/eslint-config"
   dependencies:
-    "@aetherjs/ts-config": "workspace:^"
+    "@favware/cliff-jumper": ^1.8.5
     "@typescript-eslint/eslint-plugin": ^5.30.0
     "@typescript-eslint/parser": ^5.30.0
     eslint: ^8.18.0
@@ -25,17 +25,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@aetherjs/prettier-config@workspace:packages/prettier-config"
   dependencies:
-    "@aetherjs/eslint-config": "workspace:^"
-    "@aetherjs/ts-config": "workspace:^"
+    "@favware/cliff-jumper": ^1.8.5
     prettier: ^2.7.1
     tsup: ^6.1.2
   languageName: unknown
   linkType: soft
 
-"@aetherjs/ts-config@workspace:^, @aetherjs/ts-config@workspace:packages/ts-config":
+"@aetherjs/ts-config@workspace:packages/ts-config":
   version: 0.0.0-use.local
   resolution: "@aetherjs/ts-config@workspace:packages/ts-config"
   dependencies:
+    "@favware/cliff-jumper": ^1.8.5
     tslib: ^2.4.0
     typescript: ^4.7.4
   languageName: unknown
