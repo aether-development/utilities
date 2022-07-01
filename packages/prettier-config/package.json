@@ -2,7 +2,7 @@
 	"name": "@aetherjs/prettier-config",
 	"description": "Standard Prettier config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "dist/index.js",
@@ -30,6 +30,7 @@
 		"dist/**/*.d*"
 	],
 	"dependencies": {
+		"@favware/cliff-jumper": "^1.8.5",
 		"prettier": "^2.7.1"
 	},
 	"devDependencies": {
