@@ -1,6 +1,0 @@
-name: "*next*"
-verbose: true
-package:
-  - "@aetherjs/eslint-config"
-  - "@aetherjs/prettier-config"
-  - "@aetherjs/ts-config"
