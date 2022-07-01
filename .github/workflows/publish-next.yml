@@ -46,14 +46,14 @@ jobs:
       - name: Build Dependencies
         run: yarn build --cache-dir=".turbo"
 
-      - name: Deprecate Old Versions
-        run: yarn npm-deprecate --name "*next*" --package "${{ matrix.package }}" --verbose
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-
       - name: Publish
         run: |
           yarn workspace ${{ matrix.package }} release --preid "next.$(date +%s)-$(git rev-parse --short HEAD)"
           yarn workspace ${{ matrix.package }} npm publish --tag next || true
         env:
           YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      - name: Deprecate Old Versions
+        run: yarn npm-deprecate --name "*next*" --package "${{ matrix.package }}" --message "This version has been automatically deprecated. Please use a newer version." --verbose
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
