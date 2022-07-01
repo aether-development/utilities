@@ -21,7 +21,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.con/aether-development/utilities.git",
+		"url": "https://github.con/aether-development/utilities.git",
 		"directory": "packages/prettier-config"
 	},
 	"files": [

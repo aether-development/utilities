@@ -21,7 +21,7 @@
 	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/config-eslint",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.con/aether-development/utilities.git",
+		"url": "https://github.con/aether-development/utilities.git",
 		"directory": "packages/config-eslint"
 	},
 	"keywords": [
