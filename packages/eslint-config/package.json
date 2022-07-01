@@ -2,7 +2,7 @@
 	"name": "@aetherjs/eslint-config",
 	"description": "Standard ESLint config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "dist/index.js",
@@ -48,6 +48,7 @@
 		"typescript": "^4.7.4"
 	},
 	"devDependencies": {
+		"@favware/cliff-jumper": "^1.8.5",
 		"tsup": "^6.1.2"
 	},
 	"publishConfig": {
