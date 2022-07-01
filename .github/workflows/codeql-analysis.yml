@@ -21,7 +21,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@3f62b754e23e0dd60f91b744033e1dc1654c0ec6 # tag=v2
 
-      - name: Autobuild
+      - name: Auto Build
         uses: github/codeql-action/autobuild@3f62b754e23e0dd60f91b744033e1dc1654c0ec6 # tag=v2
 
       - name: Perform CodeQL Analysis

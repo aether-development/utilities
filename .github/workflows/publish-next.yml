@@ -1,8 +1,9 @@
-name: Publish Next
+name: Publish Dev
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 */12 * * *"
+
 jobs:
   npm:
     name: npm
@@ -19,51 +20,40 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository_owner == 'aether-development'
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
-      - name: Install node.js v16
-        uses: actions/setup-node@v3
+      - name: Install NodeJS v16
+        uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd # tag=v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
           cache: "yarn"
           cache-dependency-path: yarn.lock
 
-      - name: Turbo cache
+      - name: Turbo Cache
         id: turbo-cache
-        uses: actions/cache@v3
+        uses: actions/cache@c3f1317a9e7b1ef106c153ac8c0f00fed3ddbc0d # tag=v3
         with:
           path: .turbo
           key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
           restore-keys: |
             turbo-${{ github.job }}-${{ github.ref_name }}-
 
-      - name: Check previous released version
-        id: pre-release
-        run: |
-          if [[ $(npm view ${{ matrix.package }}@next version | grep -e "$(jq --raw-output '.version' packages/${{ matrix.folder }}/package.json)\..*-$(git rev-parse --short HEAD)") ]]; \
-          then echo '::set-output name=release::false'; \
-          else echo '::set-output name=release::true'; fi
-
-      - name: Install dependencies
-        if: steps.pre-release.outputs.release == 'true'
+      - name: Install Dependencies
         run: yarn --immutable
 
-      - name: Build dependencies
-        if: steps.pre-release.outputs.release == 'true'
+      - name: Build Dependencies
         run: yarn build --cache-dir=".turbo"
 
-      - name: Deprecate old versions
-        if: steps.pre-release.outputs.release == 'true'
-        run: npm deprecate ${{ matrix.package }}@"~$(jq --raw-output '.version' packages/${{ matrix.folder }}/package.json)" "no longer supported" || true
+      - name: Deprecate Old Versions
+        run: yarn npm-deprecate --name "*next*" --package "${{ matrix.package }}"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
       - name: Publish
-        if: steps.pre-release.outputs.release == 'true'
         run: |
-          yarn workspace ${{ matrix.package }} version $(jq --raw-output '.version' packages/${{ matrix.folder }}/package.json).$(date +%s)-$(git rev-parse --short HEAD)
+          yarn workspace ${{ matrix.package }} version $(jq --raw-output '.version' packages/${{ matrix.folder }}/package.json)-next.$(date +%s)-$(git rev-parse --short HEAD)
           yarn workspace ${{ matrix.package }} npm publish --tag next || true
         env:
           YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
