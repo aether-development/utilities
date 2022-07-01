@@ -9,14 +9,14 @@ const paths = [
 	new URL("node_modules/", rootDir),
 
 	// Dist folders
-	new URL("config-eslint/node_modules/", packagesDir),
-	new URL("config-prettier/node_modules/", packagesDir),
-	new URL("config-tsconfig/node_modules/", packagesDir),
+	new URL("eslint-config/node_modules/", packagesDir),
+	new URL("prettier-config/node_modules/", packagesDir),
+	new URL("ts-config/node_modules/", packagesDir),
 
 	// Turbo folders
-	new URL("config-eslint/dist/", packagesDir),
-	new URL("config-prettier/dist/", packagesDir),
-	new URL("config-tsconfig/dist/", packagesDir)
+	new URL("eslint-config/dist/", packagesDir),
+	new URL("prettier-config/dist/", packagesDir),
+	new URL("ts-config/dist/", packagesDir)
 ];
 
 await Promise.all(paths.map((path) => rm(path, options)));

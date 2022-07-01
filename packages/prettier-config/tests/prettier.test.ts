@@ -1,3 +1,4 @@
+// @ts-expect-error This file in the eyes of vitest is a module.
 import prettierConfig from "../src";
 import { describe, test, expect } from "vitest";
 

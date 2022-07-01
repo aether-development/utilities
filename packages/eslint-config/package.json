@@ -1,8 +1,8 @@
 {
-	"name": "@aetherjs/config-eslint",
+	"name": "@aetherjs/eslint-config",
 	"description": "Standard ESLint config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.0.3",
+	"version": "0.0.1",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "dist/index.js",
@@ -12,11 +12,11 @@
 		"types": "./dist/index.d.ts"
 	},
 	"scripts": {
-		"test": "vitest run",
 		"build": "tsup",
+		"test": "vitest run",
 		"prepack": "yarn build",
-		"bump": "cliff-jumper",
-		"check-update": "cliff-jumper --dry-run"
+		"release": "cliff-jumper",
+		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/eslint-config/*'"
 	},
 	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/config-eslint",
 	"repository": {
@@ -43,12 +43,11 @@
 		"@typescript-eslint/parser": "^5.30.0",
 		"eslint": "^8.18.0",
 		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-prettier": "^4.1.0",
+		"eslint-plugin-prettier": "^4.2.1",
 		"prettier": "^2.7.1",
 		"typescript": "^4.7.4"
 	},
 	"devDependencies": {
-		"@aetherjs/config-typescript": "workspace:^",
 		"tsup": "^6.1.2"
 	},
 	"publishConfig": {

@@ -1,0 +1,70 @@
+name: Publish Dev
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */12 * * *'
+
+jobs:
+  npm:
+    name: npm
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - package: '@aetherjs/eslint-config'
+            folder: 'eslint-config'
+          - package: '@aetherjs/prettier-config'
+            folder: 'prettier-config'
+          - package: '@aetherjs/ts-config'
+            folder: 'ts-config'
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'aether-development'
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install NodeJS v16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
+
+      - name: Turbo Cache
+        id: turbo-cache
+        uses: actions/cache@v3
+        with:
+          path: .turbo
+          key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ github.job }}-${{ github.ref_name }}-
+
+      - name: Check Previous Released Version
+        id: pre-release
+        run: |
+          if [[ $(npm view ${{ matrix.package }}@dev version | grep -e "$(jq --raw-output '.version' packages/${{ matrix.folder }}/package.json)\..*-$(git rev-parse --short HEAD)") ]]; \
+          then echo '::set-output name=release::false'; \
+          else echo '::set-output name=release::true'; fi
+
+      - name: Install Dependencies
+        if: steps.pre-release.outputs.release == 'true'
+        run: yarn --immutable
+
+      - name: Build Dependencies
+        if: steps.pre-release.outputs.release == 'true'
+        run: yarn build --cache-dir=".turbo"
+
+      - name: Deprecate Old Versions
+        if: steps.pre-release.outputs.release == 'true'
+        run: npm deprecate ${{ matrix.package }}@"~$(jq --raw-output '.version' packages/${{ matrix.folder }}/package.json)" "no longer supported" || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      - name: Publish
+        if: steps.pre-release.outputs.release == 'true'
+        run: |
+          yarn workspace ${{ matrix.package }} version $(jq --raw-output '.version' packages/${{ matrix.folder }}/package.json).$(date +%s)-$(git rev-parse --short HEAD)
+          yarn workspace ${{ matrix.package }} npm publish --tag dev || true
+        env:
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

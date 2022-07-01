@@ -2,27 +2,22 @@
 	"pipeline": {
 		"build": {
 			"dependsOn": ["^build"],
-			"outputs": ["dist/**", "build/**"]
-		},
-		"lint": {
-			"dependsOn": ["@aetherjs/config-prettier#build", "@aetherjs/config-eslint#build"],
-			"outputs": []
+			"outputs": ["dist/**"]
 		},
 		"test": {
-			"dependsOn": [],
+			"dependsOn": ["^build"],
 			"outputs": ["coverage/**"]
 		},
-		"bump": {
-			"dependsOn": [],
+		"lint": {
+			"dependsOn": ["@aetherjs/prettier-config#build", "@aetherjs/eslint-config#build"],
+			"outputs": []
+		},
+		"format": {
+			"outputs": []
+		},
+		"changelog": {
+			"dependsOn": ["^build"],
 			"outputs": ["CHANGELOG.md"]
-		},
-		"check-update": {
-			"dependsOn": [],
-			"outputs": []
-		},
-		"cl": {
-			"dependsOn": [],
-			"outputs": []
 		}
 	}
 }

@@ -12,9 +12,9 @@
 		"test": "vitest run",
 		"build": "turbo run build",
 		"update": "yarn upgrade-interactive",
-		"check-update": "turbo run check-update",
+		"changelog": "turbo run changelog",
 		"postinstall": "husky install .github/husky",
-		"format": "prettier --write \"packages/**/{src,scripts}/**/*.{mjs,ts,js}\""
+		"format": "prettier --write \"packages/**/{src,tests,scripts}/**/*.{mjs,ts,js}\""
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.3",

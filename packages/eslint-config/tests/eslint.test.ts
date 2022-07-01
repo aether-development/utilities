@@ -1,3 +1,4 @@
+// @ts-expect-error This file in the eyes of vitest is a module.
 import eslintConfig from "../src";
 import { describe, test, expect } from "vitest";
 

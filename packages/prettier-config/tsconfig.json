@@ -1,5 +1,5 @@
 {
-	"extends": "@aetherjs/config-typescript",
+	"extends": "../../tsconfig.json",
 	"compilerOptions": {
 		"rootDir": "./src",
 		"outDir": "./dist",

@@ -1,0 +1,3 @@
+name: prettier-config
+org: aetherjs
+packagePath: packages/prettier-config

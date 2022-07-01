@@ -1,8 +1,8 @@
 {
-	"name": "@aetherjs/config-typescript",
+	"name": "@aetherjs/ts-config",
 	"description": "Standard Typescript config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "tsconfig.json",
@@ -12,9 +12,8 @@
 	},
 	"scripts": {
 		"test": "vitest run",
-		"lint": "eslint tests --ext mjs,ts --fix -c ../../.eslintrc",
-		"bump": "cliff-jumper",
-		"check-update": "cliff-jumper --dry-run"
+		"release": "cliff-jumper",
+		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/ts-config/*'"
 	},
 	"repository": {
 		"type": "git",
@@ -25,6 +24,7 @@
 		"tsconfig.json"
 	],
 	"dependencies": {
+		"@favware/cliff-jumper": "^1.8.5",
 		"tslib": "^2.4.0",
 		"typescript": "^4.7.4"
 	},
