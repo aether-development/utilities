@@ -5,32 +5,32 @@ All notable changes to this project will be documented in this file.\n
 """
 body = """
 {% if version %}\
-	# [{{ version | trim_start_matches(pat="v") }}]\
-	{% if previous %}\
-		{% if previous.version %}\
-			(https://github.com/aetherjs/utilities/compare/{{ previous.version }}...{{ version }})\
-		{% else %}\
-			(https://github.com/aetherjs/utilities/tree/{{ version }})\
-		{% endif %}\
-	{% endif %} \
-	- ({{ timestamp | date(format="%Y-%m-%d") }})
+    # [{{ version | trim_start_matches(pat="v") }}]\
+    {% if previous %}\
+        {% if previous.version %}\
+            (https://github.com/aether-development/utilities/compare/{{ previous.version }}...{{ version }})\
+        {% else %}\
+            (https://github.com/aether-development/utilities/tree/{{ version }})\
+        {% endif %}\
+    {% endif %} \
+    - ({{ timestamp | date(format="%Y-%m-%d") }})
 {% else %}\
-	# [unreleased]
+    # [unreleased]
 {% endif %}\
 {% for group, commits in commits | group_by(attribute="group") %}
-	## {{ group | upper_first }}
-	{% for commit in commits %}
+    ## {{ group | upper_first }}
+    {% for commit in commits %}
 		- {% if commit.scope %}\
 			**{{commit.scope}}:** \
 		  {% endif %}\
-			{{ commit.message | upper_first }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/aetherjs/utilities/commit/{{ commit.id }}))\
+            {{ commit.message | upper_first }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/aether-development/utilities/commit/{{ commit.id }}))\
 		{% if commit.breaking %}\
-			\n\n {% raw %}  {% endraw %} ### Breaking Changes:\n \
+			\n\n {% raw %}  {% endraw %} ### 💥 Breaking Changes:\n \
 			{% for breakingChange in commit.footers %}\
 				{% raw %}  {% endraw %} - {{ breakingChange }}\n\
 			{% endfor %}\
 		{% endif %}\
-	{% endfor %}
+    {% endfor %}
 {% endfor %}\n
 """
 trim = true
@@ -40,24 +40,24 @@ footer = ""
 conventional_commits = true
 filter_unconventional = true
 commit_parsers = [
-	{ message = "^feat", group = "Features" },
-	{ message = "^fix", group = "Bug Fixes" },
-	{ message = "^docs", group = "Documentation" },
-	{ message = "^perf", group = "Performance" },
-	{ message = "^refactor", group = "Refactor" },
-	{ message = "^typings", group = "Typings" },
-	{ message = "^types", group = "Typings" },
-	{ message = ".*deprecated", body = ".*deprecated", group = "Deprecation" },
+	{ message = "^feat", group = "🚀 Features" },
+	{ message = "^fix", group = "🐛 Bug Fixes" },
+	{ message = "^docs", group = "📝 Documentation" },
+	{ message = "^perf", group = "🏃 Performance" },
+	{ message = "^refactor", group = "🏠 Refactor" },
+	{ message = "^typings", group = "⌨️ Typings" },
+	{ message = "^types", group = "⌨️ Typings" },
+	{ message = ".*deprecated", body = ".*deprecated", group = "🚨 Deprecation" },
 	{ message = "^revert", skip = true },
-	{ message = "^style", group = "Styling" },
-	{ message = "^test", group = "Testing" },
+	{ message = "^style", group = "🪞 Styling" },
+	{ message = "^test", group = "🧪 Testing" },
 	{ message = "^chore", skip = true },
 	{ message = "^ci", skip = true },
 	{ message = "^build", skip = true },
-	{ body = ".*security", group = "Security" },
+	{ body = ".*security", group = "🛡️ Security" },
 ]
 filter_commits = true
-tag_pattern = "@aetherjs/rest@[0-9]*"
+tag_pattern = "@aetherjs/prettier-config@[0-9]*"
 ignore_tags = ""
 topo_order = false
 sort_commits = "newest"
