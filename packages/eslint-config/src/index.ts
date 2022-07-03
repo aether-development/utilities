@@ -4,8 +4,7 @@ const eslintConfig = {
 	parserOptions: {
 		ecmaVersion: 2020,
 		sourceType: "module",
-		project: "./tsconfig.eslint.json",
-		extraFileExtensions: [".mjs"]
+		project: "./tsconfig.eslint.json"
 	},
 	extends: ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
 	env: {
