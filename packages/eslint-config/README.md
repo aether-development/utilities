@@ -5,8 +5,8 @@
 
 **ESLint configuration for <u>Aether Development</u> projects.**
 
-![GitHub](https://img.shields.io/github/license/aether-development/utilities?color=5094c1&style=for-the-badge)
-![NPM Version](https://img.shields.io/npm/v/@aetherjs/eslint-config?color=5a8dca&style=for-the-badge)
+[![GitHub](https://img.shields.io/github/license/aether-development/utilities?color=5094c1&style=for-the-badge)](https://github.com/aether-development/utilities/blob/main/LICENSE.md)
+[![NPM Version](https://img.shields.io/npm/v/@aetherjs/eslint-config?color=5a8dca&style=for-the-badge)](https://www.npmjs.com/package/@aetherjs/eslint-config)
 
 </div>
 
