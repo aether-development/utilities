@@ -18,11 +18,11 @@
 		"release": "cliff-jumper",
 		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/eslint-config/*'"
 	},
-	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/config-eslint",
+	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
 	"repository": {
 		"type": "git",
-		"url": "https://github.con/aether-development/utilities.git",
-		"directory": "packages/config-eslint"
+		"url": "git+https://github.com/aether-development/utilities.git",
+		"directory": "packages/eslint-config"
 	},
 	"keywords": [
 		"aether-development",
@@ -33,6 +33,9 @@
 		"discord",
 		"standalone"
 	],
+	"bugs": {
+		"url": "https://github.com/aether-development/utilities/issues"
+	},
 	"files": [
 		"dist/**/*.js*",
 		"dist/**/*.mjs*",
