@@ -19,9 +19,10 @@
 		"lint": "eslint src tests --ext ts --fix",
 		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/prettier-config/*'"
 	},
+	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/prettier-config",
 	"repository": {
 		"type": "git",
-		"url": "https://github.con/aether-development/utilities.git",
+		"url": "git+https://github.com/aether-development/utilities.git",
 		"directory": "packages/prettier-config"
 	},
 	"files": [
@@ -29,6 +30,19 @@
 		"dist/**/*.mjs*",
 		"dist/**/*.d*"
 	],
+	"keywords": [
+		"aether-development",
+		"aetherjs",
+		"typescript",
+		"ts",
+		"yarn",
+		"discord",
+		"prettier",
+		"standalone"
+	],
+	"bugs": {
+		"url": "https://github.com/aether-development/utilities/issues"
+	},
 	"dependencies": {
 		"prettier": "^2.7.1"
 	},
