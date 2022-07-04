@@ -52,4 +52,4 @@ module.exports = {
 ---
 
 
-_This package was inspired by [@sapphire/eslint-config](https://github.com/sapphiredev/utilities/tree/main/packages/eslint-config)_
+_This package was inspired by [@sapphire/prettier-config](https://github.com/sapphiredev/utilities/tree/main/packages/prettier-config)_
