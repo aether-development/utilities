@@ -2,7 +2,7 @@
 	"name": "@aetherjs/ts-config",
 	"description": "Standard Typescript config for AetherJS",
 	"author": "@aetherjs",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"license": "MIT",
 	"sideEffects": false,
 	"main": "tsconfig.json",
@@ -34,7 +34,6 @@
 		"ts-config",
 		"standalone"
 	],
-	
 	"dependencies": {
 		"tslib": "^2.4.0",
 		"typescript": "^4.7.4"
