@@ -27,25 +27,25 @@ yarn add -D @aetherjs/eslint-config
 Add the ESLint config to your `package.json`
 ```json
 {
-	"name": "my-project",
-	"eslintConfig": {
-		"extends": "@aetherjs"
-	}
+    "name": "my-project",
+    "eslintConfig": {
+        "extends": "@aetherjs"
+    }
 }
 ```
 
 **Alternatively** add to your `eslintrc` / `eslintrc.json` / `eslintrc.js`
 ```json
 {
-	"extends": "@sapphire"
+    "extends": "@aetherjs"
 }
 ```
 
-**Then** create an `tsconfig.eslint.jon` next to your `eslint` file with the following content.
+**Then** create an `tsconfig.eslint.json` next to your `eslint` file with the following content.
 ```json
 {
-	"extends": "./tsconfig.json",
-	"include": ["src"]
+    "extends": "./tsconfig.json",
+    "include": ["src"]
 }
 ```
 
