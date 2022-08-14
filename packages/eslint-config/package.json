@@ -42,8 +42,8 @@
 		"dist/**/*.d*"
 	],
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.32.0",
-		"@typescript-eslint/parser": "^5.32.0",
+		"@typescript-eslint/eslint-plugin": "^5.33.0",
+		"@typescript-eslint/parser": "^5.33.0",
 		"eslint": "^8.21.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
@@ -52,7 +52,7 @@
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "^1.8.6",
-		"tsup": "^6.2.1"
+		"tsup": "^6.2.2"
 	},
 	"engines": {
 		"node": ">=v16.0.0",
