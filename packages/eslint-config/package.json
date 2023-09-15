@@ -52,7 +52,7 @@
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "^1.8.8",
-		"tsup": "^6.4.0"
+		"tsup": "^7.0.0"
 	},
 	"engines": {
 		"node": ">=v16.0.0",
