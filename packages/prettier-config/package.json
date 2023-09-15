@@ -44,7 +44,7 @@
 		"url": "https://github.com/aether-development/utilities/issues"
 	},
 	"dependencies": {
-		"prettier": "^2.7.1"
+		"prettier": "^3.0.0"
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "^1.8.8",
