@@ -44,11 +44,11 @@
 		"url": "https://github.com/aether-development/utilities/issues"
 	},
 	"dependencies": {
-		"prettier": "^2.7.1"
+		"prettier": "^2.8.8"
 	},
 	"devDependencies": {
-		"@favware/cliff-jumper": "^1.8.8",
-		"tsup": "^6.4.0"
+		"@favware/cliff-jumper": "^1.10.0",
+		"tsup": "^6.7.0"
 	},
 	"engines": {
 		"node": ">=v16.0.0",
