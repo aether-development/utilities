@@ -1,22 +1,23 @@
-name: Label Sync
+name: 'Label Sync'
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
   workflow_dispatch:
-      push:
-        branches:
-          - main
-        paths:
-          - ".github/labels.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/labels.yml'
 jobs:
-  labelsync:
-    name: Label Sync
+  label-sync:
+    name: Label sync
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'aether-development'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+        uses: actions/checkout@v4
 
       - name: Label sync
-        uses: crazy-max/ghaction-github-labeler@3de87da19416edc45c90cd89e7a4ea922a3aae5a # tag=v4
+        uses: crazy-max/ghaction-github-labeler@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
