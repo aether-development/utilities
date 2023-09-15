@@ -2,14 +2,14 @@ Chore:
   - any: ["*"]
     all: ["!packages/*", "!packages/**/*"]
 
-"Package | config-eslint":
+'Package - config-eslint':
   - packages/config-eslint/*
   - packages/config-eslint/**/*
 
-"Package | config-prettier":
+'Package - config-prettier':
   - packages/config-prettier/*
   - packages/config-prettier/**/*
 
-"Package | config-typescript":
+'Package - config-typescript':
   - packages/config-typescript/*
   - packages/config-typescript/**/*
