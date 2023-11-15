@@ -544,8 +544,8 @@ __metadata:
   linkType: hard
 
 "@favware/cliff-jumper@npm:^2.0.0":
-  version: 2.2.1
-  resolution: "@favware/cliff-jumper@npm:2.2.1"
+  version: 2.2.3
+  resolution: "@favware/cliff-jumper@npm:2.2.3"
   dependencies:
     "@sapphire/result": ^2.6.4
     "@sapphire/utilities": 3.13.0
@@ -559,7 +559,7 @@ __metadata:
   bin:
     cj: ./dist/cli.js
     cliff-jumper: ./dist/cli.js
-  checksum: e86cc0912ef01a0ba5b6806e98e7c6a3186d0ac673c2ab27e0d80c30f6a6e86f2b2839b31cfc65ce0cdc9c715887095c17b4198fa527d10343e1901ddb70eab7
+  checksum: 036e771325dd60f7ee4c5c9b65df71b9cdc0d3898450abd599a327b0c1f71fa171357a8605622177b7316d949a30a29f832dc787c15c56b37b36535481a70b63
   languageName: node
   linkType: hard
 
