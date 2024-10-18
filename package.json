@@ -55,5 +55,5 @@
 		"ansi-regex": "^6.0.1",
 		"minimist": "^1.2.7"
 	},
-	"packageManager": "yarn@3.6.3"
+	"packageManager": "yarn@3.8.6"
 }
