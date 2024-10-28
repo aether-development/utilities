@@ -34,7 +34,7 @@ Add the following to your `tsconfig.json` file.
 
 ```json
 {
-  "extends": "@aetherjs/ts-config"
+	"extends": "@aetherjs/ts-config"
 }
 ```
 
@@ -42,35 +42,35 @@ _Below is a copy of the base configuration for easy viewing._
 
 ```json
 {
-  "compileOnSave": true,
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "alwaysStrict": true,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "importHelpers": false,
-    "incremental": true,
-    "lib": ["esnext"],
-    "module": "Node16",
-    "moduleResolution": "Node16",
-    "newLine": "lf",
-    "noEmitHelpers": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "preserveConstEnums": true,
-    "pretty": true,
-    "removeComments": false,
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "ES2020",
-    "useDefineForClassFields": true,
+	"compileOnSave": true,
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"alwaysStrict": true,
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"importHelpers": false,
+		"incremental": true,
+		"lib": ["esnext"],
+		"module": "Node16",
+		"moduleResolution": "Node16",
+		"newLine": "lf",
+		"noEmitHelpers": false,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"preserveConstEnums": true,
+		"pretty": true,
+		"removeComments": false,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "ES2020",
+		"useDefineForClassFields": true,
 
-    "types": ["bun-types"]
-  }
+		"types": ["bun-types"]
+	}
 }
 ```
 

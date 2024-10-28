@@ -1,71 +1,71 @@
 {
-    "name": "@aetherjs/ts-config",
-    "version": "0.2.0",
-    "description": "Standard Typescript config for Aether-Development projects.",
-    "author": "@aetherjs",
-    "license": "MIT",
-    "sideEffects": false,
-    "homepage": "https://github.com/aether-development/utilities/tree/main/packages/ts-config",
-    "main": "src/base.json",
-    "exports": {
-        ".": {
-            "types": "./src/base.json",
-            "import": "./src/base.json",
-            "require": "./src/base.json"
-        },
-        "./bundler": {
-            "types": "./src/bundler.json",
-            "import": "./src/bundler.json",
-            "require": "./src/bundler.json"
-        },
-        "./decorators": {
-            "types": "./src/decorators.json",
-            "import": "./src/decorators.json",
-            "require": "./src/decorators.json"
-        },
-        "./extra-strict": {
-            "types": "./src/extra-strict.json",
-            "import": "./src/extra-strict.json",
-            "require": "./src/extra-strict.json"
-        },
-        "./verbatim": {
-            "types": "./src/verbatim.json",
-            "import": "./src/verbatim.json",
-            "require": "./src/verbatim.json"
-        }
-    },
-    "scripts": {
-        "bump": "cliff-jumper",
-        "check-update": "cliff-jumper --dry-run"
-    },
-    "dependencies": {
-        "typescript": "^5.6.3"
-    },
-    "devDependencies": {
-        "@favware/cliff-jumper": "^5.0.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/aether-development/utilities.git",
-        "directory": "packages/ts-config"
-    },
-    "files": [
-        "src"
-    ],
-    "keywords": [
-        "aether-development",
-        "bot",
-        "typescript",
-        "ts",
-        "bun",
-        "aetherjs",
-        "standalone"
-    ],
-    "bugs": {
-        "url": "https://github.com/aether-development/utilities/issues"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "packageManager": "bun@1.1.33"
+	"name": "@aetherjs/ts-config",
+	"version": "0.2.0",
+	"description": "Standard Typescript config for Aether-Development projects.",
+	"keywords": [
+		"aether-development",
+		"bot",
+		"typescript",
+		"ts",
+		"bun",
+		"aetherjs",
+		"standalone"
+	],
+	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/ts-config",
+	"bugs": {
+		"url": "https://github.com/aether-development/utilities/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aether-development/utilities.git",
+		"directory": "packages/ts-config"
+	},
+	"license": "MIT",
+	"author": "@aetherjs",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./src/base.json",
+			"import": "./src/base.json",
+			"require": "./src/base.json"
+		},
+		"./bundler": {
+			"types": "./src/bundler.json",
+			"import": "./src/bundler.json",
+			"require": "./src/bundler.json"
+		},
+		"./decorators": {
+			"types": "./src/decorators.json",
+			"import": "./src/decorators.json",
+			"require": "./src/decorators.json"
+		},
+		"./extra-strict": {
+			"types": "./src/extra-strict.json",
+			"import": "./src/extra-strict.json",
+			"require": "./src/extra-strict.json"
+		},
+		"./verbatim": {
+			"types": "./src/verbatim.json",
+			"import": "./src/verbatim.json",
+			"require": "./src/verbatim.json"
+		}
+	},
+	"main": "src/base.json",
+	"files": [
+		"src"
+	],
+	"scripts": {
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run"
+	},
+	"dependencies": {
+		"typescript": "^5.6.3"
+	},
+	"devDependencies": {
+		"@favware/cliff-jumper": "^5.0.0"
+	},
+	"packageManager": "bun@1.1.33",
+	"publishConfig": {
+		"access": "public"
+	}
 }

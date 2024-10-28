@@ -6,56 +6,56 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "yarn.lock",
-        "hash": "9267746433793669061"
+        "file": ".npmrc",
+        "hash": "17820884783749556967"
+      },
+      {
+        "file": ".github/renovate.json",
+        "hash": "6785070206891074581"
+      },
+      {
+        "file": "LICENSE.md",
+        "hash": "7852141905206848525"
+      },
+      {
+        "file": ".github/workflows/auto-deprecate.yml",
+        "hash": "3176025372458617481"
       },
       {
         "file": ".prettierignore",
-        "hash": "753184647239609036"
+        "hash": "148282234572311168"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5283477597901702914"
+      },
+      {
+        "file": "nx.json",
+        "hash": "4191259053258983001"
       },
       {
         "file": "scripts/clean.ts",
-        "hash": "16944232320848936283"
-      },
-      {
-        "file": ".gitattributes",
-        "hash": "2796664266057437867"
-      },
-      {
-        "file": ".opencommitignore",
-        "hash": "911409538922452126"
+        "hash": "15872899187737708784"
       },
       {
         "file": "bunfig.toml",
         "hash": "11409567068885543183"
       },
       {
-        "file": ".prettierrc.mjs",
-        "hash": "10845888581689764037"
-      },
-      {
         "file": ".gitignore",
-        "hash": "5111097269940263871"
+        "hash": "10520864421653168084"
       },
       {
-        "file": ".github/tsc.json",
-        "hash": "2228831641265947644"
-      },
-      {
-        "file": ".github/renovate.json",
-        "hash": "6759454664236878452"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "7398476709007751332"
+        "file": ".github/workflows/continuous-integration.yml",
+        "hash": "16289014766931730777"
       },
       {
         "file": ".github/workflows/label-sync.yml",
-        "hash": "12136820764905653098"
+        "hash": "13049237844552208333"
       },
       {
-        "file": "LICENSE.md",
-        "hash": "7852141905206848525"
+        "file": "yarn.lock",
+        "hash": "9267746433793669061"
       },
       {
         "file": "bun.lockb",
@@ -63,58 +63,104 @@
       },
       {
         "file": ".editorconfig",
-        "hash": "7801780220670807031"
+        "hash": "12610759251512376835"
+      },
+      {
+        "file": ".gitattributes",
+        "hash": "2796664266057437867"
       },
       {
         "file": "eslint.config.js",
-        "hash": "7150567100834923796"
-      },
-      {
-        "file": ".husky/pre-commit",
-        "hash": "17271123474893238869"
+        "hash": "13238414595951691941"
       },
       {
         "file": "README.md",
         "hash": "4405660523198481746"
       },
       {
-        "file": ".github/workflows/continuous-integration.yml",
-        "hash": "18192706021877634158"
+        "file": ".github/tsc.json",
+        "hash": "3336988019595902688"
       },
       {
-        "file": "nx.json",
-        "hash": "15327709881218811525"
+        "file": ".opencommitignore",
+        "hash": "911409538922452126"
       },
       {
-        "file": ".github/workflows/auto-deprecate.yml",
-        "hash": "7166224696561507424"
-      },
-      {
-        "file": "package.json",
-        "hash": "1372843841355818679"
+        "file": ".husky/pre-commit",
+        "hash": "17271123474893238869"
       },
       {
         "file": "tsconfig.eslint.json",
-        "hash": "1264362142767932733"
+        "hash": "1498792566529619712"
+      },
+      {
+        "file": ".prettierrc.mjs",
+        "hash": "10845888581689764037"
+      },
+      {
+        "file": "package.json",
+        "hash": "3574128508519048745"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "9153735177110778236"
       },
       {
         "file": ".vscode/settings.json",
-        "hash": "14284152349901517897"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "13160131034486783888"
+        "hash": "2277813513595859633"
       },
       {
         "file": ".github/workflows/continuous-delivery.yml",
-        "hash": "1454793655240548108"
-      },
-      {
-        "file": ".npmrc",
-        "hash": "17820884783749556967"
+        "hash": "8385661132532346719"
       }
     ],
     "projectFileMap": {
+      "@aetherjs/prettier-config": [
+        {
+          "file": "packages/prettier-config/.cliff-jumperrc.yml",
+          "hash": "18191950495209815484"
+        },
+        {
+          "file": "packages/prettier-config/CHANGELOG.md",
+          "hash": "14195050996859633668"
+        },
+        {
+          "file": "packages/prettier-config/README.md",
+          "hash": "11159016238350798917"
+        },
+        {
+          "file": "packages/prettier-config/cliff.toml",
+          "hash": "4229042789781290647"
+        },
+        {
+          "file": "packages/prettier-config/package.json",
+          "hash": "15585318094671848660",
+          "deps": [
+            "npm:@favware/cliff-jumper",
+            "npm:@types/bun",
+            "npm:bun-types",
+            "npm:@ianvs/prettier-plugin-sort-imports",
+            "npm:prettier",
+            "npm:prettier-plugin-packagejson"
+          ]
+        },
+        {
+          "file": "packages/prettier-config/scripts/build.ts",
+          "hash": "14723927012456365596"
+        },
+        {
+          "file": "packages/prettier-config/src/index.ts",
+          "hash": "297858727612625436"
+        },
+        {
+          "file": "packages/prettier-config/tsconfig.eslint.json",
+          "hash": "9364270029250191264"
+        },
+        {
+          "file": "packages/prettier-config/tsconfig.json",
+          "hash": "8760159496739168893"
+        }
+      ],
       "@aetherjs/ts-config": [
         {
           "file": "packages/ts-config/.cliff-jumperrc.yml",
@@ -126,7 +172,7 @@
         },
         {
           "file": "packages/ts-config/README.md",
-          "hash": "9917700219009649987"
+          "hash": "3293550432411016216"
         },
         {
           "file": "packages/ts-config/cliff.toml",
@@ -134,7 +180,7 @@
         },
         {
           "file": "packages/ts-config/package.json",
-          "hash": "6420209861282484583",
+          "hash": "2555358729776775691",
           "deps": [
             "npm:@favware/cliff-jumper",
             "npm:typescript"
@@ -142,31 +188,31 @@
         },
         {
           "file": "packages/ts-config/src/base.json",
-          "hash": "14633340837269765612"
+          "hash": "12728795563648732138"
         },
         {
           "file": "packages/ts-config/src/bundler.json",
-          "hash": "11934843964323157996"
+          "hash": "11365353870969071205"
         },
         {
           "file": "packages/ts-config/src/decorators.json",
-          "hash": "16470117131045238097"
+          "hash": "12931262918760010063"
         },
         {
           "file": "packages/ts-config/src/extra-strict.json",
-          "hash": "12159691456440608179"
+          "hash": "8474513402775471816"
         },
         {
           "file": "packages/ts-config/src/verbatim.json",
-          "hash": "8164283334683669680"
+          "hash": "10910209661366935052"
         },
         {
           "file": "packages/ts-config/tsconfig.eslint.json",
-          "hash": "6063154184258551074"
+          "hash": "5228424988981069826"
         },
         {
           "file": "packages/ts-config/tsconfig.json",
-          "hash": "11921429739033434642"
+          "hash": "3809591849680246052"
         }
       ],
       "@aetherjs/eslint-config": [
@@ -180,7 +226,7 @@
         },
         {
           "file": "packages/eslint-config/README.md",
-          "hash": "13873591189518132160"
+          "hash": "6955020411192141144"
         },
         {
           "file": "packages/eslint-config/cliff.toml",
@@ -188,7 +234,7 @@
         },
         {
           "file": "packages/eslint-config/package.json",
-          "hash": "12062408110476534158",
+          "hash": "4783560278247859722",
           "deps": [
             "npm:@favware/cliff-jumper",
             "npm:@types/bun",
@@ -211,73 +257,27 @@
         },
         {
           "file": "packages/eslint-config/src/base.js",
-          "hash": "6329627808240462607"
+          "hash": "13089085596493278113"
         },
         {
           "file": "packages/eslint-config/src/nextjs.js",
-          "hash": "18332953955435193062"
+          "hash": "15158659024898656941"
         },
         {
           "file": "packages/eslint-config/src/react.js",
-          "hash": "18400102521933158116"
+          "hash": "8387945880476853261"
         },
         {
           "file": "packages/eslint-config/src/types.d.ts",
-          "hash": "10547434574852073715"
+          "hash": "3104147165598598632"
         },
         {
           "file": "packages/eslint-config/tsconfig.eslint.json",
-          "hash": "11466222494386396497"
+          "hash": "16883616384195454762"
         },
         {
           "file": "packages/eslint-config/tsconfig.json",
-          "hash": "3085799343560195125"
-        }
-      ],
-      "@aetherjs/prettier-config": [
-        {
-          "file": "packages/prettier-config/.cliff-jumperrc.yml",
-          "hash": "18191950495209815484"
-        },
-        {
-          "file": "packages/prettier-config/CHANGELOG.md",
-          "hash": "14195050996859633668"
-        },
-        {
-          "file": "packages/prettier-config/README.md",
-          "hash": "5779109127312509144"
-        },
-        {
-          "file": "packages/prettier-config/cliff.toml",
-          "hash": "4229042789781290647"
-        },
-        {
-          "file": "packages/prettier-config/package.json",
-          "hash": "9848142085141355115",
-          "deps": [
-            "npm:@favware/cliff-jumper",
-            "npm:@types/bun",
-            "npm:bun-types",
-            "npm:@ianvs/prettier-plugin-sort-imports",
-            "npm:prettier",
-            "npm:prettier-plugin-packagejson"
-          ]
-        },
-        {
-          "file": "packages/prettier-config/scripts/build.ts",
-          "hash": "6529672403662325925"
-        },
-        {
-          "file": "packages/prettier-config/src/index.ts",
-          "hash": "4471952272385658637"
-        },
-        {
-          "file": "packages/prettier-config/tsconfig.eslint.json",
-          "hash": "11591105599585889350"
-        },
-        {
-          "file": "packages/prettier-config/tsconfig.json",
-          "hash": "13392055376217730767"
+          "hash": "4376519849107804526"
         }
       ]
     }

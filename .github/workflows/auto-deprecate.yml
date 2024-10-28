@@ -1,14 +1,14 @@
 name: NPM Auto Deprecate
 
 on:
-    schedule:
-        - cron: "0 0 * * *"
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
-    auto-deprecate:
-        name: NPM Auto Deprecate
-        uses: aether-development/.github/.github/workflows/reusable-bun-job.yml@main
-        with:
-            script-name: npm-deprecate
-        secrets:
-            NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+  auto-deprecate:
+    name: NPM Auto Deprecate
+    uses: aether-development/.github/.github/workflows/reusable-bun-job.yml@main
+    with:
+      script-name: npm-deprecate
+    secrets:
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

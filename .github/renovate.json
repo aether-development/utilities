@@ -1,5 +1,5 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>aether-development/.github:aether-renovate"],
-    "ignoreDeps": ["@types/conventional-recommended-bump"]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["github>aether-development/.github:aether-renovate"],
+	"ignoreDeps": ["@types/conventional-recommended-bump"]
 }

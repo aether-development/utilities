@@ -1,54 +1,54 @@
 {
-    "name": "root-utilities",
-    "private": true,
-    "type": "module",
-    "workspaces": [
-        "packages/*"
-    ],
-    "scripts": {
-        "clean": "bun run scripts/clean.ts",
-        "lint": "eslint packages --fix",
-        "format": "prettier --write \"packages/**/{src,scripts}/**/*.{mjs,ts,js,json}\"",
-        "build": "nx run-many --target=build --all",
-        "update": "bun npm-check-updates -p bun -u -ws -i -t latest",
-        "check-update": "nx run-many --target=check-update --all",
-        "prepare": "bun x husky"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^19.5.0",
-        "@commitlint/config-conventional": "^19.5.0",
-        "@favware/cliff-jumper": "^5.0.0",
-        "@favware/npm-deprecate": "^2.0.0",
-        "@types/bun": "^1.1.12",
-        "@typescript-eslint/eslint-plugin": "^8.11.0",
-        "@typescript-eslint/parser": "^8.11.0",
-        "bun-types": "^1.1.33",
-        "cz-conventional-changelog": "^3.3.0",
-        "eslint": "^9.13.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-prettier": "^5.2.1",
-        "husky": "^9.1.6",
-        "lint-staged": "^15.2.10",
-        "npm-check-updates": "^17.1.8",
-        "nx": "20.0.6",
-        "prettier": "^3.3.3",
-        "typescript": "~5.6.3"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/aether-development/utilities.git"
-    },
-    "commitlint": {
-        "extends": [
-            "@commitlint/config-conventional"
-        ]
-    },
-    "lint-staged": {
-        "*": "prettier --ignore-unknown --write"
-    },
-    "resolutions": {
-        "ansi-regex": "^5.0.1",
-        "minimist": "^1.2.8"
-    },
-    "packageManager": "bun@1.1.33"
+	"name": "root-utilities",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aether-development/utilities.git"
+	},
+	"type": "module",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"build": "nx run-many --target=build --all",
+		"check-update": "nx run-many --target=check-update --all",
+		"clean": "bun run scripts/clean.ts",
+		"format": "prettier --write \"packages/**/{src,scripts}/**/*.{mjs,ts,js,json}\"",
+		"lint": "eslint packages --fix",
+		"prepare": "bun x husky",
+		"update": "bun npm-check-updates -p bun -u -ws -i -t latest"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"lint-staged": {
+		"*": "prettier --ignore-unknown --write"
+	},
+	"resolutions": {
+		"ansi-regex": "^5.0.1",
+		"minimist": "^1.2.8"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"@favware/cliff-jumper": "^5.0.0",
+		"@favware/npm-deprecate": "^2.0.0",
+		"@types/bun": "^1.1.12",
+		"@typescript-eslint/eslint-plugin": "^8.11.0",
+		"@typescript-eslint/parser": "^8.11.0",
+		"bun-types": "^1.1.33",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^9.13.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"npm-check-updates": "^17.1.8",
+		"nx": "20.0.6",
+		"prettier": "^3.3.3",
+		"typescript": "~5.6.3"
+	},
+	"packageManager": "bun@1.1.33"
 }

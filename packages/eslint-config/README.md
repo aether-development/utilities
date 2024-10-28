@@ -34,10 +34,10 @@ Add the ESLint config to your `package.json`
 
 ```json
 {
-  "name": "my-project",
-  "eslintConfig": {
-    "extends": "@aetherjs"
-  }
+	"name": "my-project",
+	"eslintConfig": {
+		"extends": "@aetherjs"
+	}
 }
 ```
 
@@ -45,7 +45,7 @@ Add the ESLint config to your `package.json`
 
 ```json
 {
-  "extends": "@aetherjs"
+	"extends": "@aetherjs"
 }
 ```
 
@@ -53,8 +53,8 @@ Add the ESLint config to your `package.json`
 
 ```json
 {
-  "extends": "./tsconfig.json",
-  "include": ["src"]
+	"extends": "./tsconfig.json",
+	"include": ["src"]
 }
 ```
 

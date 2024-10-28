@@ -1,9 +1,9 @@
 {
-    "extends": "./src/base.json",
-    "compilerOptions": {
-        "rootDir": "./",
-        "incremental": false,
-        "esModuleInterop": true
-    },
-    "include": ["."]
+	"extends": "./src/base.json",
+	"compilerOptions": {
+		"rootDir": "./",
+		"incremental": false,
+		"esModuleInterop": true
+	},
+	"include": ["."]
 }

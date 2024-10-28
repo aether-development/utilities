@@ -34,8 +34,8 @@ For `package.json`, add the following.
 
 ```json
 {
-  "name": "my-project",
-  "prettier": "@aetherjs/prettier-config"
+	"name": "my-project",
+	"prettier": "@aetherjs/prettier-config"
 }
 ```
 
@@ -43,21 +43,21 @@ For `prettierrc.json`, add the following.
 
 ```json
 {
-  "extends": "@aetherjs"
+	"extends": "@aetherjs"
 }
 ```
 
 For `prettierrc.js`, add the following.
 
 ```js
-module.exports = require("@aetherjs/prettier-config");
+module.exports = require('@aetherjs/prettier-config');
 ```
 
 **OR** to use with overrides, add the following.
 
 ```js
 module.exports = {
-  ...require("@aetherjs/prettier-config"),
+	...require('@aetherjs/prettier-config'),
 };
 ```
 

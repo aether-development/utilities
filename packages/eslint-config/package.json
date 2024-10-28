@@ -1,77 +1,77 @@
 {
-    "name": "@aetherjs/eslint-config",
-    "version": "0.2.0",
-    "description": "Standard ESLint config for Aether-Development projects.",
-    "author": "@aetherjs",
-    "license": "MIT",
-    "sideEffects": false,
-    "homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
-    "type": "module",
-    "main": "src/base.js",
-    "exports": {
-        ".": {
-            "types": "./src/base.js",
-            "import": "./src/base.js",
-            "require": "./src/base.js"
-        },
-        "./nextjs": {
-            "types": "./src/nextjs.js",
-            "import": "./src/nextjs.js",
-            "require": "./src/nextjs.js"
-        },
-        "./react": {
-            "types": "./src/react.js",
-            "import": "./src/react.js",
-            "require": "./src/react.js"
-        }
-    },
-    "scripts": {
-        "bump": "cliff-jumper",
-        "check-update": "cliff-jumper --dry-run"
-    },
-    "dependencies": {
-        "@next/eslint-plugin-next": "^15.0.1",
-        "@typescript-eslint/eslint-plugin": "^8.11.0",
-        "@typescript-eslint/parser": "^8.11.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-import": "^2.31.0",
-        "eslint-plugin-jsx-a11y": "^6.10.2",
-        "eslint-plugin-prettier": "^5.2.1",
-        "eslint-plugin-react": "^7.37.2",
-        "eslint-plugin-react-hooks": "^5.0.0",
-        "typescript-eslint": "^8.11.0"
-    },
-    "devDependencies": {
-        "@favware/cliff-jumper": "^5.0.0",
-        "@types/bun": "^1.1.12",
-        "@types/eslint": "^9.6.1",
-        "bun-types": "^1.1.33",
-        "eslint": "^9.13.0",
-        "prettier": "^3.3.3",
-        "typescript": "^5.6.3"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/aether-development/utilities.git",
-        "directory": "packages/eslint-config"
-    },
-    "files": [
-        "dist/"
-    ],
-    "keywords": [
-        "aether-development",
-        "bot",
-        "typescript",
-        "ts",
-        "bun",
-        "aetherjs",
-        "standalone"
-    ],
-    "bugs": {
-        "url": "https://github.com/aether-development/utilities/issues"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "packageManager": "bun@1.1.33"
+	"name": "@aetherjs/eslint-config",
+	"version": "0.2.0",
+	"description": "Standard ESLint config for Aether-Development projects.",
+	"keywords": [
+		"aether-development",
+		"bot",
+		"typescript",
+		"ts",
+		"bun",
+		"aetherjs",
+		"standalone"
+	],
+	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
+	"bugs": {
+		"url": "https://github.com/aether-development/utilities/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aether-development/utilities.git",
+		"directory": "packages/eslint-config"
+	},
+	"license": "MIT",
+	"author": "@aetherjs",
+	"sideEffects": false,
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./src/base.js",
+			"import": "./src/base.js",
+			"require": "./src/base.js"
+		},
+		"./nextjs": {
+			"types": "./src/nextjs.js",
+			"import": "./src/nextjs.js",
+			"require": "./src/nextjs.js"
+		},
+		"./react": {
+			"types": "./src/react.js",
+			"import": "./src/react.js",
+			"require": "./src/react.js"
+		}
+	},
+	"main": "src/base.js",
+	"files": [
+		"dist/"
+	],
+	"scripts": {
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run"
+	},
+	"dependencies": {
+		"@next/eslint-plugin-next": "^15.0.1",
+		"@typescript-eslint/eslint-plugin": "^8.11.0",
+		"@typescript-eslint/parser": "^8.11.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-prettier": "^5.2.1",
+		"eslint-plugin-react": "^7.37.2",
+		"eslint-plugin-react-hooks": "^5.0.0",
+		"typescript-eslint": "^8.11.0"
+	},
+	"devDependencies": {
+		"@favware/cliff-jumper": "^5.0.0",
+		"@types/bun": "^1.1.12",
+		"@types/eslint": "^9.6.1",
+		"bun-types": "^1.1.33",
+		"eslint": "^9.13.0",
+		"prettier": "^3.3.3",
+		"typescript": "^5.6.3"
+	},
+	"packageManager": "bun@1.1.33",
+	"publishConfig": {
+		"access": "public"
+	}
 }
