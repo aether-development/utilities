@@ -1,0 +1,32 @@
+name: Publish To Github
+run-name: Github Publish @aether-development/${{ inputs.package }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: The package to release
+        required: true
+        type: choice
+        options:
+          - eslint-config
+          - prettier-config
+          - ts-config
+      skip-automatic-bump:
+        description: Whether to skip the automatic bumping of the packageversion
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  PublishPackage:
+    name: Publish @aether-development/${{ inputs.package}}
+    uses: aether-development/.github/.github/workflows/reusable-publish.yml@main
+    with:
+      build: true
+      project-name: '@aetherjs/${{ inputs.package}}'
+      working-directory: packages/${{ inputs.package }}
+      skip-automatic-bump: ${{ inputs.skip-automatic-bump }}
+      registry: 'npm'
+    secrets:
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
