@@ -7,4 +7,4 @@ on:
 
 jobs:
     label_sync:
-        uses: zendrex/zendrex/.github/workflows/reusable-labelsync.yml@main
+        uses: aether-development/.github/.github/workflows/reusable-labelsync.yml@main
