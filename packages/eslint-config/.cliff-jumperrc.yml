@@ -1,3 +1,10 @@
 name: eslint-config
 org: aetherjs
+install: true
 packagePath: packages/eslint-config
+identifierBase: false
+pushTag: true
+githubRelease: true
+githubReleaseLatest: true
+gitRepo: aether-development/utilities
+gitHostVariant: github

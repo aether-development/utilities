@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/aether-development/.github/blob/69ea94cf3c71445296dff428ad3bf8eeffccc72d/resources/Aether%20Development%20Logo.png" width="546" alt="aether-framework" />
+<img src="https://raw.githubusercontent.com/aether-development/.github/d75ee364dfd4683e01baedc97256f536bb40f0a9/assets/AetherDevelopmentLogo.png" width="546" alt="aether-framework" />
 
 # @aetherjs/eslint-config
 
@@ -11,7 +11,9 @@
 </div>
 
 ## Installation
+
 Install the package with one of the following commands below.
+
 ```yaml
 # For NPM
 npm install --save-dev @aetherjs/eslint-config
@@ -21,35 +23,41 @@ pnpm add -D @aetherjs/eslint-config
 
 # For YARN
 yarn add -D @aetherjs/eslint-config
+
+# For Bun
+bun add -D @aetherjs/eslint-config
 ```
 
 ## Usage
+
 Add the ESLint config to your `package.json`
+
 ```json
 {
-    "name": "my-project",
-    "eslintConfig": {
-        "extends": "@aetherjs"
-    }
+  "name": "my-project",
+  "eslintConfig": {
+    "extends": "@aetherjs"
+  }
 }
 ```
 
 **Alternatively** add to your `eslintrc` / `eslintrc.json` / `eslintrc.js`
+
 ```json
 {
-    "extends": "@aetherjs"
+  "extends": "@aetherjs"
 }
 ```
 
 **Then** create an `tsconfig.eslint.json` next to your `eslint` file with the following content.
+
 ```json
 {
-    "extends": "./tsconfig.json",
-    "include": ["src"]
+  "extends": "./tsconfig.json",
+  "include": ["src"]
 }
 ```
 
 ---
-
 
 _This package was inspired by [@sapphire/eslint-config](https://github.com/sapphiredev/utilities/tree/main/packages/eslint-config)_

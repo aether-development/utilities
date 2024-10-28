@@ -1,64 +1,77 @@
 {
-	"name": "@aetherjs/eslint-config",
-	"description": "Standard ESLint config for AetherJS",
-	"author": "@aetherjs",
-	"version": "0.1.4",
-	"license": "MIT",
-	"sideEffects": false,
-	"main": "dist/index.js",
-	"exports": {
-		"import": "./dist/index.js",
-		"require": "./dist/index.js",
-		"types": "./dist/index.d.ts"
-	},
-	"scripts": {
-		"build": "tsup",
-		"test": "vitest run",
-		"prepack": "yarn build",
-		"release": "cliff-jumper",
-		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/eslint-config/*'"
-	},
-	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/aether-development/utilities.git",
-		"directory": "packages/eslint-config"
-	},
-	"keywords": [
-		"aether-development",
-		"aetherjs",
-		"typescript",
-		"ts",
-		"yarn",
-		"discord",
-		"standalone"
-	],
-	"bugs": {
-		"url": "https://github.com/aether-development/utilities/issues"
-	},
-	"files": [
-		"dist/**/*.js*",
-		"dist/**/*.mjs*",
-		"dist/**/*.d*"
-	],
-	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"eslint": "^8.27.0",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-prettier": "^5.0.0",
-		"prettier": "^3.0.0",
-		"typescript": "^5.0.0"
-	},
-	"devDependencies": {
-		"@favware/cliff-jumper": "^2.0.0",
-		"tsup": "^7.0.0"
-	},
-	"engines": {
-		"node": ">=v16.0.0",
-		"npm": ">=8.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+    "name": "@aetherjs/eslint-config",
+    "version": "0.1.4",
+    "description": "Standard ESLint config for Aether-Development projects.",
+    "author": "@aetherjs",
+    "license": "MIT",
+    "sideEffects": false,
+    "homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
+    "type": "module",
+    "main": "src/base.js",
+    "exports": {
+        ".": {
+            "types": "./src/base.js",
+            "import": "./src/base.js",
+            "require": "./src/base.js"
+        },
+        "./nextjs": {
+            "types": "./src/nextjs.js",
+            "import": "./src/nextjs.js",
+            "require": "./src/nextjs.js"
+        },
+        "./react": {
+            "types": "./src/react.js",
+            "import": "./src/react.js",
+            "require": "./src/react.js"
+        }
+    },
+    "scripts": {
+        "bump": "cliff-jumper",
+        "check-update": "cliff-jumper --dry-run"
+    },
+    "dependencies": {
+        "@next/eslint-plugin-next": "^15.0.1",
+        "@typescript-eslint/eslint-plugin": "^8.11.0",
+        "@typescript-eslint/parser": "^8.11.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-react": "^7.37.2",
+        "eslint-plugin-react-hooks": "^5.0.0",
+        "typescript-eslint": "^8.11.0"
+    },
+    "devDependencies": {
+        "@favware/cliff-jumper": "^5.0.0",
+        "@types/bun": "^1.1.12",
+        "@types/eslint": "^9.6.1",
+        "bun-types": "^1.1.33",
+        "eslint": "^9.13.0",
+        "prettier": "^3.3.3",
+        "typescript": "^5.6.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aether-development/utilities.git",
+        "directory": "packages/eslint-config"
+    },
+    "files": [
+        "dist/"
+    ],
+    "keywords": [
+        "aether-development",
+        "bot",
+        "typescript",
+        "ts",
+        "bun",
+        "aetherjs",
+        "standalone"
+    ],
+    "bugs": {
+        "url": "https://github.com/aether-development/utilities/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "bun@1.1.33"
 }
