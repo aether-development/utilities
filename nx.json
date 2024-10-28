@@ -1,0 +1,14 @@
+{
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "targetDefaults": {
+        "format": {
+            "outputs": ["{projectRoot}/node_modules/.cache/.prettiercache"],
+            "cache": true
+        },
+        "lint": {
+            "outputs": ["{projectRoot}/node_modules/.cache/.eslintcache"],
+            "cache": true
+        }
+    },
+    "defaultBase": "main"
+}

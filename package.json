@@ -1,59 +1,55 @@
 {
-	"name": "root-utilities",
-	"private": true,
-	"workspaces": [
-		"packages/*"
-	],
-	"scripts": {
-		"commit": "cz",
-		"clean": "node scripts/clean.mjs",
-		"clean:full": "node scripts/clean-full.mjs",
-		"lint": "turbo run lint",
-		"test": "vitest run",
-		"build": "turbo run build",
-		"update": "yarn upgrade-interactive",
-		"changelog": "turbo run changelog",
-		"postinstall": "husky install .github/husky",
-		"format": "prettier --write \"packages/**/{src,tests,scripts}/**/*.{mjs,ts,js}\""
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^17.2.0",
-		"@commitlint/config-conventional": "^17.2.0",
-		"@favware/cliff-jumper": "^2.0.0",
-		"@favware/npm-deprecate": "^1.0.5",
-		"c8": "^8.0.0",
-		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^8.27.0",
-		"husky": "^8.0.1",
-		"lint-staged": "^14.0.0",
-		"prettier": "^3.0.0",
-		"pretty-quick": "^3.1.3",
-		"rimraf": "^5.0.0",
-		"tslib": "^2.4.1",
-		"tsup": "^7.0.0",
-		"turbo": "^1.6.3",
-		"typescript": "^5.0.0",
-		"vitest": "^0.34.0"
-	},
-	"engines": {
-		"node": ">=16.9.0"
-	},
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
-	},
-	"lint-staged": {
-		"*.{mjs,js,ts}": "eslint --fix --ext mjs,js,ts"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	},
-	"resolutions": {
-		"ansi-regex": "^6.0.1",
-		"minimist": "^1.2.7"
-	},
-	"packageManager": "yarn@3.6.3"
+    "name": "root-utilities",
+    "private": true,
+    "type": "module",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "clean": "bun run scripts/clean.ts",
+        "lint": "eslint packages --fix",
+        "format": "prettier --write \"packages/**/{src,scripts}/**/*.{mjs,ts,js,json}\"",
+        "build": "nx run-many --target=build --all",
+        "update": "bun npm-check-updates -p bun -u -ws -i -t latest",
+        "check-update": "nx run-many --target=check-update --all",
+        "prepare": "bun x husky"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.5.0",
+        "@commitlint/config-conventional": "^19.5.0",
+        "@favware/cliff-jumper": "^5.0.0",
+        "@favware/npm-deprecate": "^2.0.0",
+        "@types/bun": "^1.1.12",
+        "@typescript-eslint/eslint-plugin": "^8.11.0",
+        "@typescript-eslint/parser": "^8.11.0",
+        "bun-types": "^1.1.33",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^9.13.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "husky": "^9.1.6",
+        "lint-staged": "^15.2.10",
+        "npm-check-updates": "^17.1.8",
+        "nx": "20.0.6",
+        "prettier": "^3.3.3",
+        "typescript": "~5.6.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aether-development/utilities.git"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "lint-staged": {
+        "*": "prettier --ignore-unknown --write",
+        "*.{mjs,js,ts}": "eslint --fix --ext mjs,js,ts"
+    },
+    "resolutions": {
+        "ansi-regex": "^5.0.1",
+        "minimist": "^1.2.8"
+    },
+    "packageManager": "bun@1.1.33"
 }

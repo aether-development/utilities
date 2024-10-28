@@ -1,23 +1,5 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:base"],
-    "prHourlyLimit": 3,
-    "packageRules": [
-        {
-            "matchUpdateTypes": ["major"],
-            "dependencyDashboardApproval": true
-        },
-        {
-            "matchDepTypes": ["dependencies"],
-            "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-            "matchCurrentVersion": "!/^0/",
-            "automergeType": "branch",
-            "automerge": true
-        },
-        {
-            "matchDepTypes": ["devDependencies"],
-            "automergeType": "branch",
-            "automerge": true
-        }
-    ]
+    "extends": ["github>aether-development/.github:aether-renovate"],
+    "ignoreDeps": ["@types/conventional-recommended-bump"]
 }
