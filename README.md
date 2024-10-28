@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/aether-development/.github/blob/69ea94cf3c71445296dff428ad3bf8eeffccc72d/resources/Aether%20Development%20Logo.png" width="546" alt="aether-framework" />
+<img src="https://raw.githubusercontent.com/aether-development/.github/d75ee364dfd4683e01baedc97256f536bb40f0a9/assets/AetherDevelopmentLogo.png" width="546" alt="aether-framework" />
 
 # AetherJS Utilities
 

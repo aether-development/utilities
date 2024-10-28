@@ -41,6 +41,6 @@ jobs:
             ref: ${{ github.event.inputs.ref }}
             repository: ${{ github.event.inputs.repository }}
             working-directory: packages/${{ matrix.package }}
-            registry: "github"
+            registry: "npm"
         secrets:
-            GH_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

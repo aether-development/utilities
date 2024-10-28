@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/aether-development/.github/blob/69ea94cf3c71445296dff428ad3bf8eeffccc72d/resources/Aether%20Development%20Logo.png" width="546" alt="aether-framework" />
+<img src="https://raw.githubusercontent.com/aether-development/.github/d75ee364dfd4683e01baedc97256f536bb40f0a9/assets/AetherDevelopmentLogo.png" width="546" alt="aether-framework" />
 
 # @aetherjs/ts-config
 
@@ -23,6 +23,9 @@ pnpm add -D @aetherjs/ts-config
 
 # For YARN
 yarn add -D @aetherjs/ts-config
+
+# For Bun
+bun add -D @aetherjs/ts-config
 ```
 
 ## Usage
@@ -35,7 +38,7 @@ Add the following to your `tsconfig.json` file.
 }
 ```
 
-_Below is a copy of the configuration for easy viewing._
+_Below is a copy of the base configuration for easy viewing._
 
 ```json
 {
@@ -45,18 +48,14 @@ _Below is a copy of the configuration for easy viewing._
     "alwaysStrict": true,
     "declaration": true,
     "declarationMap": true,
-    "emitDecoratorMetadata": false,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
-    "importsNotUsedAsValues": "error",
+    "importHelpers": false,
     "incremental": true,
     "lib": ["esnext"],
-    "module": "CommonJS",
-    "moduleResolution": "Node",
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "newLine": "lf",
-    "noEmitHelpers": true,
+    "noEmitHelpers": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -68,7 +67,9 @@ _Below is a copy of the configuration for easy viewing._
     "sourceMap": true,
     "strict": true,
     "target": "ES2020",
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+
+    "types": ["bun-types"]
   }
 }
 ```
