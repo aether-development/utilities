@@ -4887,15 +4887,6 @@
         "hash": "sha512-ATMEEXr+ywls1kgrZEWl4SBPEm0uDdyDAjyNzUC0/Z8WZTD3RqbJcQDR+Dau+wYkW9KHK6zqQIsFyfn+9aduWg=="
       }
     },
-    "npm:prettier-plugin-tailwindcss": {
-      "type": "npm",
-      "name": "npm:prettier-plugin-tailwindcss",
-      "data": {
-        "version": "0.6.8",
-        "packageName": "prettier-plugin-tailwindcss",
-        "hash": "sha512-dGu3kdm7SXPkiW4nzeWKCl3uoImdd5CTZEJGxyypEPL37Wj0HT2pLqjrvSei1nTeuQfO4PUfjeW5cTUNRLZ4sA=="
-      }
-    },
     "npm:pretty-format": {
       "type": "npm",
       "name": "npm:pretty-format",
@@ -6152,11 +6143,6 @@
       "type": "static"
     },
     {
-      "source": "npm:@aetherjs/prettier-config@workspace:packages/prettier-config",
-      "target": "npm:prettier-plugin-tailwindcss",
-      "type": "static"
-    },
-    {
       "source": "npm:@aetherjs/ts-config@workspace:packages/ts-config",
       "target": "npm:typescript",
       "type": "static"
@@ -7137,76 +7123,6 @@
       "type": "static"
     },
     {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:execa",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:semver",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:js-yaml",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:colorette",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:commander",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:git-cliff",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:smol-toml",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:@octokit/core",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:@sapphire/result",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:@octokit/auth-token",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:@sapphire/utilities",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:@octokit/plugin-retry",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:@favware/colorette-spinner",
-      "type": "static"
-    },
-    {
-      "source": "npm:@favware/cliff-jumper",
-      "target": "npm:conventional-recommended-bump",
-      "type": "static"
-    },
-    {
       "source": "npm:@favware/colorette-spinner",
       "target": "npm:colorette",
       "type": "static"
@@ -7582,11 +7498,6 @@
       "type": "static"
     },
     {
-      "source": "npm:@types/bun",
-      "target": "npm:bun-types@1.1.32",
-      "type": "static"
-    },
-    {
       "source": "npm:@types/conventional-commits-parser",
       "target": "npm:@types/node",
       "type": "static"
@@ -7704,76 +7615,6 @@
     {
       "source": "npm:@typescript-eslint/eslint-plugin",
       "target": "npm:@typescript-eslint/scope-manager",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:ignore",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:graphemer",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:ts-api-utils",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:natural-compare",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:@typescript-eslint/utils",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:@eslint-community/regexpp",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:@typescript-eslint/type-utils",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:@typescript-eslint/visitor-keys",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/eslint-plugin",
-      "target": "npm:@typescript-eslint/scope-manager",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/parser",
-      "target": "npm:debug",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/parser",
-      "target": "npm:@typescript-eslint/types",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/parser",
-      "target": "npm:@typescript-eslint/visitor-keys",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/parser",
-      "target": "npm:@typescript-eslint/scope-manager",
-      "type": "static"
-    },
-    {
-      "source": "npm:@typescript-eslint/parser",
-      "target": "npm:@typescript-eslint/typescript-estree",
       "type": "static"
     },
     {
@@ -8443,16 +8284,6 @@
     },
     {
       "source": "npm:bun-types@1.1.32",
-      "target": "npm:@types/node",
-      "type": "static"
-    },
-    {
-      "source": "npm:bun-types",
-      "target": "npm:@types/ws",
-      "type": "static"
-    },
-    {
-      "source": "npm:bun-types",
       "target": "npm:@types/node",
       "type": "static"
     },
@@ -12532,181 +12363,6 @@
       "type": "static"
     },
     {
-      "source": "npm:eslint",
-      "target": "npm:@eslint-community/eslint-utils",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@eslint-community/regexpp",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@eslint/config-array",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@eslint/core",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@eslint/eslintrc",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@eslint/js",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@eslint/plugin-kit",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@humanfs/node",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@humanwhocodes/module-importer",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@humanwhocodes/retry",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@types/estree",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:@types/json-schema",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:ajv",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:chalk@4.1.2",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:cross-spawn",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:debug",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:escape-string-regexp",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:eslint-scope",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:eslint-visitor-keys",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:espree",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:esquery",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:esutils",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:fast-deep-equal",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:file-entry-cache",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:find-up",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:glob-parent",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:ignore",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:imurmurhash",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:is-glob",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:json-stable-stringify-without-jsonify",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:lodash.merge",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:minimatch",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:natural-compare",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:optionator",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint",
-      "target": "npm:text-table",
-      "type": "static"
-    },
-    {
       "source": "npm:eslint-import-resolver-node",
       "target": "npm:debug@3.2.7",
       "type": "static"
@@ -12894,16 +12550,6 @@
     {
       "source": "npm:eslint-plugin-jsx-a11y",
       "target": "npm:string.prototype.includes",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint-plugin-prettier",
-      "target": "npm:prettier-linter-helpers",
-      "type": "static"
-    },
-    {
-      "source": "npm:eslint-plugin-prettier",
-      "target": "npm:synckit",
       "type": "static"
     },
     {

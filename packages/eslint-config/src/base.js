@@ -16,8 +16,7 @@ export const restrictEnvAccess = tseslint.config(
                 {
                     object: "process",
                     property: "env",
-                    message:
-                        "Use `import { env } from '~/env'` instead to ensure validated types.",
+                    message: "Use `import { env } from '~/env'` instead to ensure validated types.",
                 },
             ],
             "no-restricted-imports": [
@@ -25,8 +24,7 @@ export const restrictEnvAccess = tseslint.config(
                 {
                     name: "process",
                     importNames: ["env"],
-                    message:
-                        "Use `import { env } from '~/env'` instead to ensure validated types.",
+                    message: "Use `import { env } from '~/env'` instead to ensure validated types.",
                 },
             ],
         },
@@ -71,10 +69,7 @@ export default tseslint.config(
                     allowConstantLoopConditions: true,
                 },
             ],
-            "import/consistent-type-specifier-style": [
-                "error",
-                "prefer-top-level",
-            ],
+            "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
 
             // Custom
             "@typescript-eslint/no-unsafe-declaration-merging": "off",

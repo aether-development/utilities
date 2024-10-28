@@ -6,28 +6,40 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": "yarn.lock",
+        "hash": "9267746433793669061"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "753184647239609036"
+      },
+      {
+        "file": "scripts/clean.ts",
+        "hash": "16944232320848936283"
+      },
+      {
         "file": ".gitattributes",
         "hash": "2796664266057437867"
       },
       {
-        "file": "bun.lockb",
-        "hash": "9020287567837861358"
+        "file": ".opencommitignore",
+        "hash": "911409538922452126"
       },
       {
-        "file": ".github/workflows/continuous-integration.yml",
-        "hash": "4045604235555362911"
+        "file": "bunfig.toml",
+        "hash": "11409567068885543183"
+      },
+      {
+        "file": ".prettierrc.mjs",
+        "hash": "10845888581689764037"
       },
       {
         "file": ".gitignore",
-        "hash": "685810219890570327"
+        "hash": "5111097269940263871"
       },
       {
-        "file": "eslint.config.js",
-        "hash": "7150567100834923796"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "13160131034486783888"
+        "file": ".github/tsc.json",
+        "hash": "2228831641265947644"
       },
       {
         "file": ".github/renovate.json",
@@ -39,55 +51,39 @@
       },
       {
         "file": ".github/workflows/label-sync.yml",
-        "hash": "16408680323493583097"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "7801780220670807031"
-      },
-      {
-        "file": "README.md",
-        "hash": "1077205632719800990"
+        "hash": "12136820764905653098"
       },
       {
         "file": "LICENSE.md",
         "hash": "7852141905206848525"
       },
       {
-        "file": "tsconfig.eslint.json",
-        "hash": "1264362142767932733"
+        "file": "bun.lockb",
+        "hash": "16702405907174487579"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "7801780220670807031"
+      },
+      {
+        "file": "eslint.config.js",
+        "hash": "7150567100834923796"
       },
       {
         "file": ".husky/pre-commit",
         "hash": "17271123474893238869"
       },
       {
-        "file": "yarn.lock",
-        "hash": "13301692285325929847"
+        "file": "README.md",
+        "hash": "4405660523198481746"
       },
       {
-        "file": ".opencommitignore",
-        "hash": "18358818829731316730"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "14284152349901517897"
-      },
-      {
-        "file": "scripts/clean.ts",
-        "hash": "16944232320848936283"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "8462730090087983460"
+        "file": ".github/workflows/continuous-integration.yml",
+        "hash": "18192706021877634158"
       },
       {
         "file": "nx.json",
         "hash": "15327709881218811525"
-      },
-      {
-        "file": ".github/tsc.json",
-        "hash": "2228831641265947644"
       },
       {
         "file": ".github/workflows/auto-deprecate.yml",
@@ -98,127 +94,27 @@
         "hash": "1372843841355818679"
       },
       {
-        "file": ".github/workflows/continuous-delivery.yml.disabled",
-        "hash": "14376817212916164854"
+        "file": "tsconfig.eslint.json",
+        "hash": "1264362142767932733"
       },
       {
-        "file": "bunfig.toml",
-        "hash": "11409567068885543183"
+        "file": ".vscode/settings.json",
+        "hash": "14284152349901517897"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "13160131034486783888"
+      },
+      {
+        "file": ".github/workflows/continuous-delivery.yml",
+        "hash": "1454793655240548108"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "17820884783749556967"
       }
     ],
     "projectFileMap": {
-      "@aetherjs/eslint-config": [
-        {
-          "file": "packages/eslint-config/.cliff-jumperrc.yml",
-          "hash": "739093162869093808"
-        },
-        {
-          "file": "packages/eslint-config/CHANGELOG.md",
-          "hash": "16720377105615814129"
-        },
-        {
-          "file": "packages/eslint-config/README.md",
-          "hash": "13873591189518132160"
-        },
-        {
-          "file": "packages/eslint-config/cliff.toml",
-          "hash": "4229042789781290647"
-        },
-        {
-          "file": "packages/eslint-config/package.json",
-          "hash": "9835170215963126272",
-          "deps": [
-            "npm:@favware/cliff-jumper",
-            "npm:@types/bun",
-            "npm:@types/eslint",
-            "npm:bun-types",
-            "npm:eslint",
-            "npm:prettier",
-            "npm:typescript",
-            "npm:@next/eslint-plugin-next",
-            "npm:@typescript-eslint/eslint-plugin",
-            "npm:@typescript-eslint/parser",
-            "npm:eslint-config-prettier",
-            "npm:eslint-plugin-import",
-            "npm:eslint-plugin-jsx-a11y",
-            "npm:eslint-plugin-prettier",
-            "npm:eslint-plugin-react",
-            "npm:eslint-plugin-react-hooks",
-            "npm:typescript-eslint"
-          ]
-        },
-        {
-          "file": "packages/eslint-config/src/base.js",
-          "hash": "2421450867480902312"
-        },
-        {
-          "file": "packages/eslint-config/src/nextjs.js",
-          "hash": "18332953955435193062"
-        },
-        {
-          "file": "packages/eslint-config/src/react.js",
-          "hash": "18400102521933158116"
-        },
-        {
-          "file": "packages/eslint-config/src/types.d.ts",
-          "hash": "2108157575449585417"
-        },
-        {
-          "file": "packages/eslint-config/tsconfig.eslint.json",
-          "hash": "11466222494386396497"
-        },
-        {
-          "file": "packages/eslint-config/tsconfig.json",
-          "hash": "3085799343560195125"
-        }
-      ],
-      "@aetherjs/prettier-config": [
-        {
-          "file": "packages/prettier-config/.cliff-jumperrc.yml",
-          "hash": "18191950495209815484"
-        },
-        {
-          "file": "packages/prettier-config/CHANGELOG.md",
-          "hash": "14195050996859633668"
-        },
-        {
-          "file": "packages/prettier-config/README.md",
-          "hash": "160089342504675427"
-        },
-        {
-          "file": "packages/prettier-config/cliff.toml",
-          "hash": "4229042789781290647"
-        },
-        {
-          "file": "packages/prettier-config/package.json",
-          "hash": "17337248318557299492",
-          "deps": [
-            "npm:@favware/cliff-jumper",
-            "npm:@types/bun",
-            "npm:bun-types",
-            "npm:@ianvs/prettier-plugin-sort-imports",
-            "npm:prettier",
-            "npm:prettier-plugin-packagejson",
-            "npm:prettier-plugin-tailwindcss"
-          ]
-        },
-        {
-          "file": "packages/prettier-config/scripts/build.ts",
-          "hash": "9616048519134623223"
-        },
-        {
-          "file": "packages/prettier-config/src/index.ts",
-          "hash": "9961933972917808033"
-        },
-        {
-          "file": "packages/prettier-config/tsconfig.eslint.json",
-          "hash": "11591105599585889350"
-        },
-        {
-          "file": "packages/prettier-config/tsconfig.json",
-          "hash": "17586596454042117531"
-        }
-      ],
       "@aetherjs/ts-config": [
         {
           "file": "packages/ts-config/.cliff-jumperrc.yml",
@@ -230,7 +126,7 @@
         },
         {
           "file": "packages/ts-config/README.md",
-          "hash": "11487534489202958120"
+          "hash": "9917700219009649987"
         },
         {
           "file": "packages/ts-config/cliff.toml",
@@ -238,7 +134,7 @@
         },
         {
           "file": "packages/ts-config/package.json",
-          "hash": "7112212473294706870",
+          "hash": "6420209861282484583",
           "deps": [
             "npm:@favware/cliff-jumper",
             "npm:typescript"
@@ -271,6 +167,117 @@
         {
           "file": "packages/ts-config/tsconfig.json",
           "hash": "11921429739033434642"
+        }
+      ],
+      "@aetherjs/eslint-config": [
+        {
+          "file": "packages/eslint-config/.cliff-jumperrc.yml",
+          "hash": "739093162869093808"
+        },
+        {
+          "file": "packages/eslint-config/CHANGELOG.md",
+          "hash": "16720377105615814129"
+        },
+        {
+          "file": "packages/eslint-config/README.md",
+          "hash": "13873591189518132160"
+        },
+        {
+          "file": "packages/eslint-config/cliff.toml",
+          "hash": "4229042789781290647"
+        },
+        {
+          "file": "packages/eslint-config/package.json",
+          "hash": "12062408110476534158",
+          "deps": [
+            "npm:@favware/cliff-jumper",
+            "npm:@types/bun",
+            "npm:@types/eslint",
+            "npm:bun-types",
+            "npm:eslint",
+            "npm:prettier",
+            "npm:typescript",
+            "npm:@next/eslint-plugin-next",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-jsx-a11y",
+            "npm:eslint-plugin-prettier",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-react-hooks",
+            "npm:typescript-eslint"
+          ]
+        },
+        {
+          "file": "packages/eslint-config/src/base.js",
+          "hash": "6329627808240462607"
+        },
+        {
+          "file": "packages/eslint-config/src/nextjs.js",
+          "hash": "18332953955435193062"
+        },
+        {
+          "file": "packages/eslint-config/src/react.js",
+          "hash": "18400102521933158116"
+        },
+        {
+          "file": "packages/eslint-config/src/types.d.ts",
+          "hash": "10547434574852073715"
+        },
+        {
+          "file": "packages/eslint-config/tsconfig.eslint.json",
+          "hash": "11466222494386396497"
+        },
+        {
+          "file": "packages/eslint-config/tsconfig.json",
+          "hash": "3085799343560195125"
+        }
+      ],
+      "@aetherjs/prettier-config": [
+        {
+          "file": "packages/prettier-config/.cliff-jumperrc.yml",
+          "hash": "18191950495209815484"
+        },
+        {
+          "file": "packages/prettier-config/CHANGELOG.md",
+          "hash": "14195050996859633668"
+        },
+        {
+          "file": "packages/prettier-config/README.md",
+          "hash": "5779109127312509144"
+        },
+        {
+          "file": "packages/prettier-config/cliff.toml",
+          "hash": "4229042789781290647"
+        },
+        {
+          "file": "packages/prettier-config/package.json",
+          "hash": "9848142085141355115",
+          "deps": [
+            "npm:@favware/cliff-jumper",
+            "npm:@types/bun",
+            "npm:bun-types",
+            "npm:@ianvs/prettier-plugin-sort-imports",
+            "npm:prettier",
+            "npm:prettier-plugin-packagejson"
+          ]
+        },
+        {
+          "file": "packages/prettier-config/scripts/build.ts",
+          "hash": "6529672403662325925"
+        },
+        {
+          "file": "packages/prettier-config/src/index.ts",
+          "hash": "4471952272385658637"
+        },
+        {
+          "file": "packages/prettier-config/tsconfig.eslint.json",
+          "hash": "11591105599585889350"
+        },
+        {
+          "file": "packages/prettier-config/tsconfig.json",
+          "hash": "13392055376217730767"
         }
       ]
     }

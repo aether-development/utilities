@@ -5094,15 +5094,6 @@
         "hash": "sha512-ATMEEXr+ywls1kgrZEWl4SBPEm0uDdyDAjyNzUC0/Z8WZTD3RqbJcQDR+Dau+wYkW9KHK6zqQIsFyfn+9aduWg=="
       }
     },
-    "npm:prettier-plugin-tailwindcss": {
-      "type": "npm",
-      "name": "npm:prettier-plugin-tailwindcss",
-      "data": {
-        "version": "0.6.8",
-        "packageName": "prettier-plugin-tailwindcss",
-        "hash": "sha512-dGu3kdm7SXPkiW4nzeWKCl3uoImdd5CTZEJGxyypEPL37Wj0HT2pLqjrvSei1nTeuQfO4PUfjeW5cTUNRLZ4sA=="
-      }
-    },
     "npm:pretty-format": {
       "type": "npm",
       "name": "npm:pretty-format",
@@ -6323,11 +6314,6 @@
         "source": "@aetherjs/prettier-config",
         "target": "npm:prettier-plugin-packagejson",
         "type": "static"
-      },
-      {
-        "source": "@aetherjs/prettier-config",
-        "target": "npm:prettier-plugin-tailwindcss",
-        "type": "static"
       }
     ],
     "@aetherjs/eslint-config": [
@@ -6495,11 +6481,6 @@
       {
         "source": "npm:@aetherjs/prettier-config@workspace:packages/prettier-config",
         "target": "npm:prettier-plugin-packagejson",
-        "type": "static"
-      },
-      {
-        "source": "npm:@aetherjs/prettier-config@workspace:packages/prettier-config",
-        "target": "npm:prettier-plugin-tailwindcss",
         "type": "static"
       }
     ],

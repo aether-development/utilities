@@ -2,43 +2,6 @@
     "name": "@aetherjs/prettier-config",
     "version": "0.2.0",
     "description": "Standard Prettier config for Aether-Development projects.",
-    "author": "@aetherjs",
-    "license": "MIT",
-    "sideEffects": false,
-    "homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
-    "type": "module",
-    "main": "dist/index.js",
-    "module": "dist/index.js",
-    "exports": {
-        ".": {
-            "import": "./dist/index.js",
-            "require": "./dist/index.js"
-        }
-    },
-    "scripts": {
-        "build": "bun run ./scripts/build.ts",
-        "bump": "cliff-jumper",
-        "check-update": "cliff-jumper --dry-run"
-    },
-    "dependencies": {
-        "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
-        "prettier": "^3.3.3",
-        "prettier-plugin-packagejson": "^2.5.3",
-        "prettier-plugin-tailwindcss": "^0.6.8"
-    },
-    "devDependencies": {
-        "@favware/cliff-jumper": "^5.0.0",
-        "@types/bun": "^1.1.12",
-        "bun-types": "^1.1.33"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/aether-development/utilities.git",
-        "directory": "packages/prettier-config"
-    },
-    "files": [
-        "dist/"
-    ],
     "keywords": [
         "aether-development",
         "bot",
@@ -48,11 +11,47 @@
         "aetherjs",
         "standalone"
     ],
+    "homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
     "bugs": {
         "url": "https://github.com/aether-development/utilities/issues"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aether-development/utilities.git",
+        "directory": "packages/prettier-config"
+    },
+    "license": "MIT",
+    "author": "@aetherjs",
+    "sideEffects": false,
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./src/index.js",
+            "require": "./src/index.js"
+        }
+    },
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "files": [
+        "dist/"
+    ],
+    "scripts": {
+        "build": "bun run ./scripts/build.ts",
+        "bump": "cliff-jumper",
+        "check-update": "cliff-jumper --dry-run"
+    },
+    "dependencies": {
+        "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+        "prettier": "^3.3.3",
+        "prettier-plugin-packagejson": "^2.5.3"
+    },
+    "devDependencies": {
+        "@favware/cliff-jumper": "^5.0.0",
+        "@types/bun": "^1.1.12",
+        "bun-types": "^1.1.33"
+    },
+    "packageManager": "bun@1.1.33",
     "publishConfig": {
         "access": "public"
-    },
-    "packageManager": "bun@1.1.33"
+    }
 }
