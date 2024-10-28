@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-# [@aetherjs/eslint-config@1.0.0](https://github.com/aether-development/utilities/tree/@aetherjs/eslint-config@1.0.0) - (2024-10-28)
+# [@aetherjs/eslint-config@1.2.0](https://github.com/aether-development/utilities/tree/@aetherjs/eslint-config@1.0.0) - (2024-10-28)
 
 ## 🐛 Bug Fixes
 

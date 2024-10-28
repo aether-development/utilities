@@ -1,6 +1,6 @@
 {
 	"name": "@aetherjs/eslint-config",
-	"version": "1.0.0",
+	"version": "1.2.0",
 	"description": "Standard ESLint config for Aether-Development projects.",
 	"keywords": [
 		"aether-development",
