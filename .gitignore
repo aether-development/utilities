@@ -52,3 +52,5 @@ package-lock.json
 # Ignore NX caching
 .nx/cache
 .nx/workspace-data
+
+.env
