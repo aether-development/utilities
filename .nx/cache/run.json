@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run-many --target=build --all",
+    "startTime": "2024-10-28T01:15:07.099Z",
+    "endTime": "2024-10-28T01:15:07.194Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@aetherjs/prettier-config:build",
+      "target": "build",
+      "projectName": "@aetherjs/prettier-config",
+      "hash": "14114471097364399425",
+      "startTime": "2024-10-28T01:15:07.105Z",
+      "endTime": "2024-10-28T01:15:07.192Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

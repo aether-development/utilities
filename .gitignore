@@ -49,5 +49,5 @@ docs/
 # Ignore package locks
 package-lock.json
 
-# Ignore Turbo caching
-.turbo
+# Ignore NX caching
+.nx
