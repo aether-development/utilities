@@ -1,6 +1,6 @@
 {
     "name": "@aetherjs/ts-config",
-    "version": "0.1.5",
+    "version": "0.2.0",
     "description": "Standard Typescript config for Aether-Development projects.",
     "author": "@aetherjs",
     "license": "MIT",

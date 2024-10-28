@@ -1,6 +1,6 @@
 {
     "name": "@aetherjs/prettier-config",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "description": "Standard Prettier config for Aether-Development projects.",
     "author": "@aetherjs",
     "license": "MIT",
