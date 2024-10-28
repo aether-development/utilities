@@ -1,51 +1,72 @@
 {
-	"name": "@aetherjs/ts-config",
-	"description": "Standard Typescript config for AetherJS",
-	"author": "@aetherjs",
-	"version": "0.1.5",
-	"license": "MIT",
-	"sideEffects": false,
-	"main": "tsconfig.json",
-	"exports": {
-		"import": "./tsconfig.json",
-		"require": "./tsconfig.json"
-	},
-	"scripts": {
-		"test": "vitest run",
-		"release": "cliff-jumper",
-		"changelog": "git cliff --prepend ./CHANGELOG.md -u -c ./cliff.toml -r ../../ --include-path 'packages/ts-config/*'"
-	},
-	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/ts-config",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/aether-development/utilities.git",
-		"directory": "packages/ts-config"
-	},
-	"files": [
-		"tsconfig.json"
-	],
-	"keywords": [
-		"aether-development",
-		"aetherjs",
-		"typescript",
-		"ts",
-		"yarn",
-		"discord",
-		"ts-config",
-		"standalone"
-	],
-	"dependencies": {
-		"tslib": "^2.4.1",
-		"typescript": "^5.0.0"
-	},
-	"devDependencies": {
-		"@favware/cliff-jumper": "^2.0.0"
-	},
-	"engines": {
-		"node": ">=v16.0.0",
-		"npm": ">=8.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+    "name": "@aetherjs/ts-config",
+    "version": "0.1.5",
+    "description": "Standard Typescript config for Aether-Development projects.",
+    "author": "@aetherjs",
+    "license": "MIT",
+    "sideEffects": false,
+    "homepage": "https://github.com/aether-development/utilities/tree/main/packages/ts-config",
+    "main": "src/base.json",
+    "exports": {
+        ".": {
+            "types": "./src/base.json",
+            "import": "./src/base.json",
+            "require": "./src/base.json"
+        },
+        "./bundler": {
+            "types": "./src/bundler.json",
+            "import": "./src/bundler.json",
+            "require": "./src/bundler.json"
+        },
+        "./decorators": {
+            "types": "./src/decorators.json",
+            "import": "./src/decorators.json",
+            "require": "./src/decorators.json"
+        },
+        "./extra-strict": {
+            "types": "./src/extra-strict.json",
+            "import": "./src/extra-strict.json",
+            "require": "./src/extra-strict.json"
+        },
+        "./verbatim": {
+            "types": "./src/verbatim.json",
+            "import": "./src/verbatim.json",
+            "require": "./src/verbatim.json"
+        }
+    },
+    "scripts": {
+        "build": "echo 'No build step configured!'",
+        "bump": "cliff-jumper",
+        "check-update": "cliff-jumper --dry-run"
+    },
+    "dependencies": {
+        "typescript": "^5.6.3"
+    },
+    "devDependencies": {
+        "@favware/cliff-jumper": "^5.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aether-development/utilities.git",
+        "directory": "packages/ts-config"
+    },
+    "files": [
+        "src"
+    ],
+    "keywords": [
+        "aether-development",
+        "bot",
+        "typescript",
+        "ts",
+        "bun",
+        "aetherjs",
+        "standalone"
+    ],
+    "bugs": {
+        "url": "https://github.com/aether-development/utilities/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "bun@1.1.33"
 }

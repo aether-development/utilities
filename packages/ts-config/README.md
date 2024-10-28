@@ -11,7 +11,9 @@
 </div>
 
 ## Installation
+
 Install the package with one of the following commands below.
+
 ```yaml
 # For NPM
 npm install --save-dev @aetherjs/ts-config
@@ -24,50 +26,53 @@ yarn add -D @aetherjs/ts-config
 ```
 
 ## Usage
+
 Add the following to your `tsconfig.json` file.
+
 ```json
 {
-    "extends": "@aetherjs/ts-config"
+  "extends": "@aetherjs/ts-config"
 }
 ```
 
 _Below is a copy of the configuration for easy viewing._
+
 ```json
 {
-    "compileOnSave": true,
-    "compilerOptions": {
-        "allowSyntheticDefaultImports": true,
-        "alwaysStrict": true,
-        "declaration": true,
-        "declarationMap": true,
-        "emitDecoratorMetadata": false,
-        "esModuleInterop": true,
-        "experimentalDecorators": true,
-        "forceConsistentCasingInFileNames": true,
-        "importHelpers": true,
-        "importsNotUsedAsValues": "error",
-        "incremental": true,
-        "lib": ["esnext"],
-        "module": "CommonJS",
-        "moduleResolution": "Node",
-        "newLine": "lf",
-        "noEmitHelpers": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "preserveConstEnums": true,
-        "pretty": true,
-        "removeComments": false,
-        "resolveJsonModule": true,
-        "sourceMap": true,
-        "strict": true,
-        "target": "ES2020",
-        "useDefineForClassFields": true
-    }
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDecoratorMetadata": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "importsNotUsedAsValues": "error",
+    "incremental": true,
+    "lib": ["esnext"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "newLine": "lf",
+    "noEmitHelpers": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "pretty": true,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true
+  }
 }
 ```
----
 
+---
 
 _This package was inspired by [@sapphire/ts-config](https://github.com/sapphiredev/utilities/tree/main/packages/ts-config)_
