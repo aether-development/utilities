@@ -2,3 +2,5 @@ bun.lockb
 yarn.lock
 *.png
 *.jpg
+
+.nx/
