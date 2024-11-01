@@ -2,27 +2,9 @@
 	"name": "@aetherjs/ts-config",
 	"version": "1.2.0",
 	"description": "Standard Typescript config for Aether-Development projects.",
-	"keywords": [
-		"aether-development",
-		"bot",
-		"typescript",
-		"ts",
-		"bun",
-		"aetherjs",
-		"standalone"
-	],
-	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/ts-config",
-	"bugs": {
-		"url": "https://github.com/aether-development/utilities/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/aether-development/utilities.git",
-		"directory": "packages/ts-config"
-	},
-	"license": "MIT",
 	"author": "@aetherjs",
-	"sideEffects": false,
+	"license": "MIT",
+	"main": "src/base.json",
 	"exports": {
 		".": {
 			"types": "./src/base.json",
@@ -50,10 +32,7 @@
 			"require": "./src/verbatim.json"
 		}
 	},
-	"main": "src/base.json",
-	"files": [
-		"src"
-	],
+	"sideEffects": false,
 	"scripts": {
 		"bump": "cliff-jumper",
 		"check-update": "cliff-jumper --dry-run"
@@ -64,6 +43,27 @@
 	"devDependencies": {
 		"@favware/cliff-jumper": "^5.0.0"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aether-development/utilities.git",
+		"directory": "packages/ts-config"
+	},
+	"bugs": {
+		"url": "https://github.com/aether-development/utilities/issues"
+	},
+	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/ts-config",
+	"keywords": [
+		"aether-development",
+		"bot",
+		"typescript",
+		"ts",
+		"bun",
+		"aetherjs",
+		"standalone"
+	],
+	"files": [
+		"src"
+	],
 	"packageManager": "bun@1.1.33",
 	"publishConfig": {
 		"access": "public"

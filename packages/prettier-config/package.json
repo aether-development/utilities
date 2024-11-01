@@ -2,39 +2,18 @@
 	"name": "@aetherjs/prettier-config",
 	"version": "1.2.0",
 	"description": "Standard Prettier config for Aether-Development projects.",
-	"keywords": [
-		"aether-development",
-		"bot",
-		"typescript",
-		"ts",
-		"bun",
-		"aetherjs",
-		"standalone"
-	],
-	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
-	"bugs": {
-		"url": "https://github.com/aether-development/utilities/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/aether-development/utilities.git",
-		"directory": "packages/prettier-config"
-	},
-	"license": "MIT",
 	"author": "@aetherjs",
-	"sideEffects": false,
+	"license": "MIT",
 	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
 	"exports": {
 		".": {
 			"import": "./dist/index.js",
 			"require": "./dist/index.js"
 		}
 	},
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"files": [
-		"dist/"
-	],
+	"sideEffects": false,
 	"scripts": {
 		"build": "bun run ./scripts/build.ts",
 		"bump": "cliff-jumper",
@@ -50,6 +29,27 @@
 		"@types/bun": "^1.1.12",
 		"bun-types": "^1.1.33"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aether-development/utilities.git",
+		"directory": "packages/prettier-config"
+	},
+	"bugs": {
+		"url": "https://github.com/aether-development/utilities/issues"
+	},
+	"homepage": "https://github.com/aether-development/utilities/tree/main/packages/eslint-config",
+	"keywords": [
+		"aether-development",
+		"bot",
+		"typescript",
+		"ts",
+		"bun",
+		"aetherjs",
+		"standalone"
+	],
+	"files": [
+		"dist/"
+	],
 	"packageManager": "bun@1.1.33",
 	"publishConfig": {
 		"access": "public"

@@ -39,6 +39,32 @@ const config = {
 				useTabs: false,
 			},
 		},
+		{
+			files: 'package.json',
+			options: {
+				packageSortOrder: [
+					'name',
+					'version',
+					'description',
+					'author',
+					'license',
+					'type',
+					'main',
+					'module',
+					'types',
+					'exports',
+					'sideEffects',
+					'scripts',
+					'dependencies',
+					'devDependencies',
+					'peerDependencies',
+					'repository',
+					'bugs',
+					'homepage',
+					'keywords',
+				],
+			},
+		},
 	],
 };
 
