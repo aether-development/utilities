@@ -1,5 +1,9 @@
 {
 	"name": "root-utilities",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
 	"type": "module",
 	"scripts": {
 		"build": "nx run-many --target=build --all",
@@ -16,13 +20,9 @@
 		"@favware/cliff-jumper": "^5.0.0",
 		"@favware/npm-deprecate": "^2.0.0",
 		"@types/bun": "^1.1.12",
-		"@typescript-eslint/eslint-plugin": "^8.12.2",
-		"@typescript-eslint/parser": "^8.12.2",
 		"bun-types": "^1.1.33",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^9.13.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-prettier": "^5.2.1",
 		"husky": "^9.1.6",
 		"lint-staged": "^15.2.10",
 		"npm-check-updates": "^17.1.9",
@@ -34,10 +34,6 @@
 		"type": "git",
 		"url": "git+https://github.com/aether-development/utilities.git"
 	},
-	"private": true,
-	"workspaces": [
-		"packages/*"
-	],
 	"commitlint": {
 		"extends": [
 			"@commitlint/config-conventional"

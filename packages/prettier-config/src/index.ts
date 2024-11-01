@@ -45,9 +45,11 @@ const config = {
 				packageSortOrder: [
 					'name',
 					'version',
+					'private',
 					'description',
 					'author',
 					'license',
+					'workspaces',
 					'type',
 					'main',
 					'module',
