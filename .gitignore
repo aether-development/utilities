@@ -2,9 +2,7 @@
 
 # Ignore a blackhole and the folder for development
 node_modules/
-.vs/
-.idea/
-*.iml
+.nx/
 
 # misc
 .DS_Store
@@ -12,20 +10,6 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
-
-
-# yarn
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-
-# Yarn files
-.yarn/install-state.gz
-.yarn/build-state.yml
 
 # Build Artifacts
 dist/
@@ -40,17 +24,10 @@ docs/
 *.7z
 *.rar
 
-# Ignore heapsnapshot and log files
-*.heapsnapshot
+# Ignore log files
 *.log
-coverage/
-docs/
 
 # Ignore package locks
 package-lock.json
-
-# Ignore NX caching
-.nx/cache
-.nx/workspace-data
 
 .env
