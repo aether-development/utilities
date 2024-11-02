@@ -1,3 +1,5 @@
 CHANGELOG.md
 **/dist
 .nx
+bun.lockb
+yarn.lock
