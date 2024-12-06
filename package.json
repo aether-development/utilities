@@ -7,29 +7,28 @@
 	"type": "module",
 	"scripts": {
 		"build": "nx run-many --target=build --all",
-		"check-update": "nx run-many --target=check-update --all",
 		"clean": "bun run scripts/clean.ts",
-		"format": "prettier --write \"packages/**/*.{mjs,ts,js,json}\"",
-		"lint": "eslint packages --fix",
+		"format": "nx run @aetherjs/prettier-config:build && prettier --write .",
+		"lint": "nx run @aetherjs/eslint-config:build && eslint . --fix",
 		"prepare": "bun x husky",
 		"update": "bun npm-check-updates -p bun -u -ws -i -t latest"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^19.5.0",
-		"@commitlint/config-conventional": "^19.5.0",
+		"@commitlint/cli": "^19.6.0",
+		"@commitlint/config-conventional": "^19.6.0",
 		"@favware/cliff-jumper": "^5.0.0",
 		"@favware/npm-deprecate": "^2.0.0",
-		"@types/bun": "^1.1.13",
-		"bun-types": "^1.1.34",
+		"@types/bun": "^1.1.14",
+		"bun-types": "^1.1.38",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^9.14.0",
-		"husky": "^9.1.6",
+		"eslint": "^9.16.0",
+		"husky": "^9.1.7",
 		"lint-staged": "^15.2.10",
-		"npm-check-updates": "^17.1.9",
-		"nx": "20.0.7",
-		"prettier": "^3.3.3",
+		"npm-check-updates": "^17.1.11",
+		"nx": "20.2.0",
+		"prettier": "^3.4.2",
 		"tsup": "^8.3.5",
-		"typescript": "~5.6.3"
+		"typescript": "~5.7.2"
 	},
 	"repository": {
 		"type": "git",
@@ -43,5 +42,5 @@
 	"lint-staged": {
 		"*": "prettier --ignore-unknown --write"
 	},
-	"packageManager": "bun@1.1.34"
+	"packageManager": "bun@1.1.38"
 }

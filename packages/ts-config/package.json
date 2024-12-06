@@ -39,7 +39,7 @@
 	},
 	"dependencies": {
 		"tslib": "^2.8.1",
-		"typescript": "^5.6.3"
+		"typescript": "^5.7.2"
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "^5.0.0"

@@ -8,6 +8,9 @@
 		"lint": {
 			"outputs": ["{projectRoot}/node_modules/.cache/.eslintcache"],
 			"cache": true
+		},
+		"build": {
+			"cache": true
 		}
 	},
 	"defaultBase": "main"
