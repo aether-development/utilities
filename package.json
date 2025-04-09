@@ -6,7 +6,7 @@
 	],
 	"type": "module",
 	"scripts": {
-		"build": "nx run-many --target=build --all",
+		"build": "nx run-many --target=build --all --exclude=root-utilities",
 		"clean": "bun run ./scripts/clean.ts",
 		"format": "nx run-many --target=format --all",
 		"format:check": "nx run-many --target=format:check --all",
@@ -46,29 +46,5 @@
 	"lint-staged": {
 		"*": "prettier --ignore-unknown --write"
 	},
-	"packageManager": "bun@1.2.9",
-	"nx": {
-		"targets": {
-			"format": {
-				"executor": "nx:run-commands",
-				"dependsOn": [
-					"@aetherjs/prettier-config:build"
-				],
-				"options": {
-					"command": "prettier --write \"packages/**/*.{mjs,ts,js,json}\"",
-					"cwd": "{projectRoot}"
-				}
-			},
-			"format:check": {
-				"executor": "nx:run-commands",
-				"dependsOn": [
-					"@aetherjs/prettier-config:build"
-				],
-				"options": {
-					"command": "prettier --check \"packages/**/*.{mjs,ts,js,json}\"",
-					"cwd": "{projectRoot}"
-				}
-			}
-		}
-	}
+	"packageManager": "bun@1.2.9"
 }

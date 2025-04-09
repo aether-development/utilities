@@ -1,0 +1,22 @@
+{
+	"name": "root-utilities",
+	"$schema": "node_modules/nx/schemas/project-schema.json",
+	"targets": {
+		"format": {
+			"executor": "nx:run-commands",
+			"dependsOn": ["@aetherjs/prettier-config:build"],
+			"options": {
+				"command": "prettier --write \"packages/**/*.{mjs,ts,js,json}\"",
+				"cwd": "{projectRoot}"
+			}
+		},
+		"format:check": {
+			"executor": "nx:run-commands",
+			"dependsOn": ["@aetherjs/prettier-config:build"],
+			"options": {
+				"command": "prettier --check \"packages/**/*.{mjs,ts,js,json}\"",
+				"cwd": "{projectRoot}"
+			}
+		}
+	}
+}
