@@ -8,10 +8,23 @@ on:
 jobs:
   auto-deprecate:
     name: NPM Auto Deprecate
-    uses: aether-development/.github/.github/workflows/reusable-bun-job.yml@main
-    with:
-      script-name: npm-deprecate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Run Script
+        run: bun run auto-deprecate
+
     secrets:
-      NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-    env:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
