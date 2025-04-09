@@ -1,5 +1,5 @@
-name: Publish To Github
-run-name: Github Publish @aether-development/${{ inputs.package }}
+name: Publish
+run-name: Publish @aether-development/${{ inputs.package }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ inputs.package }}
@@ -25,7 +25,15 @@ on:
         required: false
         default: false
         type: boolean
-
+      registry:
+        description: The registry to publish to
+        required: false
+        default: npm
+        type: choice
+        options:
+          - npm
+          - github
+          - both
 jobs:
   PublishPackage:
     name: Publish @aether-development/${{ inputs.package}}
@@ -35,7 +43,7 @@ jobs:
       project-name: '@aetherjs/${{ inputs.package}}'
       working-directory: packages/${{ inputs.package }}
       skip-automatic-bump: ${{ inputs.skip-automatic-bump }}
-      registry: 'npm'
+      registry: ${{ inputs.registry }}
     secrets:
       NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
       GH_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
