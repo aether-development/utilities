@@ -25,6 +25,5 @@ jobs:
 
       - name: Run Script
         run: bun run auto-deprecate
-
-    secrets:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
