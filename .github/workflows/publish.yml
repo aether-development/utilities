@@ -7,7 +7,7 @@ concurrency:
 
 permissions:
   # contents: write # Needed if the reusable workflow bumps versions AND pushes changes
-  contents: read # Sufficient if only reading code and bumping locally before publish
+  contents: write # Sufficient if only reading code and bumping locally before publish
   packages: write # Needed for GitHub Packages publish
   id-token: write # Needed for NPM provenance
 
