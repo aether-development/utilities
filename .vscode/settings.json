@@ -12,7 +12,7 @@
 	"files.eol": "\n",
 	"cSpell.words": ["aetherjs"],
 	"files.exclude": {
-		"**/node_modules": true,
+		"**/node_modules": false,
 		"**/.git": true
 	},
 	"files.associations": {

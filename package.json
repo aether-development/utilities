@@ -11,7 +11,7 @@
 		"format": "nx run-many --target=format --all",
 		"format:check": "nx run-many --target=format:check --all",
 		"lint": "nx run-many --target=lint --all --exclude=root-utilities",
-		"prepare": "bun x husky",
+		"prepare": "bunx husky",
 		"update": "bunx ncu -p bun -u -i -ws -t latest --format group"
 	},
 	"devDependencies": {
@@ -45,5 +45,8 @@
 	"lint-staged": {
 		"*": "prettier --ignore-unknown --write"
 	},
-	"packageManager": "bun@1.2.9"
+	"packageManager": "bun@1.2.9",
+	"patchedDependencies": {
+		"@favware/cliff-jumper@6.0.0": "patches/@favware%2Fcliff-jumper@6.0.0.patch"
+	}
 }
