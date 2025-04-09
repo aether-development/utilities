@@ -40,7 +40,7 @@
 		"typescript-eslint": "^8.29.1"
 	},
 	"devDependencies": {
-		"@favware/cliff-jumper": "^5.0.0"
+		"@favware/cliff-jumper": "^6.0.0"
 	},
 	"repository": {
 		"type": "git",
