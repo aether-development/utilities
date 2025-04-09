@@ -21,7 +21,6 @@
 		"@favware/npm-deprecate": "^2.0.0",
 		"@types/bun": "^1.2.9",
 		"@types/node": "^22.14.0",
-		"@types/rimraf": "^4.0.5",
 		"bun-types": "^1.2.9",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^9.24.0",
