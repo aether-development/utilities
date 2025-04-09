@@ -38,4 +38,4 @@ jobs:
       registry: 'npm'
     secrets:
       NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-      REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+      GH_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
