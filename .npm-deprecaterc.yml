@@ -1,0 +1,5 @@
+name: '*next*'
+package:
+  - '@aetherjs/ts-config'
+  - '@aetherjs/eslint-config'
+  - '@aetherjs/prettier-config'
