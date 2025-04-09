@@ -1,13 +1,15 @@
 name: Publish
-run-name: Publish @aether-development/${{ inputs.package }}
+run-name: Publish ${{ inputs.package }} to ${{ inputs.registry }} # Updated run-name
 
 concurrency:
-  group: ${{ github.workflow }}-${{ inputs.package }}
+  group: ${{ github.workflow }}-${{ inputs.package }}-${{ inputs.registry }} # Added registry to group
   cancel-in-progress: true
 
 permissions:
-  contents: write
-  packages: write
+  # contents: write # Needed if the reusable workflow bumps versions AND pushes changes
+  contents: read # Sufficient if only reading code and bumping locally before publish
+  packages: write # Needed for GitHub Packages publish
+  id-token: write # Needed for NPM provenance
 
 on:
   workflow_dispatch:
@@ -21,7 +23,7 @@ on:
           - prettier-config
           - ts-config
       skip-automatic-bump:
-        description: Whether to skip the automatic bumping of the packageversion
+        description: Whether to skip the automatic bumping of the package version
         required: false
         default: false
         type: boolean
@@ -34,16 +36,20 @@ on:
           - npm
           - github
           - both
+
 jobs:
   PublishPackage:
-    name: Publish @aether-development/${{ inputs.package}}
+    # Updated job name for clarity
+    name: Publish ${{ inputs.package }} to ${{ inputs.registry }}
     uses: aether-development/.github/.github/workflows/reusable-publish.yml@main
     with:
       build: true
-      project-name: '@aetherjs/${{ inputs.package}}'
+      project-name: '${{ inputs.package }}'
       working-directory: packages/${{ inputs.package }}
       skip-automatic-bump: ${{ inputs.skip-automatic-bump }}
       registry: ${{ inputs.registry }}
+      npm-scope: '@aetherjs'
+      github-scope: '@aether-development'
     secrets:
       NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
       GH_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -30,6 +30,15 @@ on:
         required: false
         default: aether-development/utilities
         type: string
+      registry:
+        description: The registry to publish the 'next'/'pr-*' tag to
+        required: false
+        default: npm
+        type: choice
+        options:
+          - npm
+          - github
+          - both
   push:
     branches:
       - main
@@ -73,7 +82,8 @@ jobs:
   Publish:
     needs: determine-packages
     if: needs.determine-packages.outputs.packages_json != '[]'
-    name: Publish Next ${{ matrix.package }} to NPM Registry
+    # Updated job name for clarity
+    name: Publish Next/PR ${{ matrix.package }} to NPM & GitHub
     strategy:
       fail-fast: false
       matrix:
@@ -83,12 +93,13 @@ jobs:
     uses: aether-development/.github/.github/workflows/reusable-continuous-delivery.yml@main
     with:
       build: true
-      pr-number: ${{ github.event.inputs.prNumber }} # Pass dispatch input
-      # Determine ref/repo based on trigger event
+      pr-number: ${{ github.event.inputs.prNumber }}
       ref: ${{ github.event_name == 'push' && github.ref_name || github.event.inputs.ref }}
       repository: ${{ github.event_name == 'push' && github.repository || github.event.inputs.repository }}
-      # Use matrix value here - this is safe now that we're using the composite action
       working-directory: packages/${{ matrix.package }}
-      registry: 'npm' # Kept original registry
+      registry: ${{ github.event.inputs.registry }}
+      npm-scope: '@aetherjs'
+      github-scope: '@aether-development'
     secrets:
-      NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }} # Kept original secret
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+      GH_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
