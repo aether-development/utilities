@@ -1,10 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 
+import { rimraf } from 'rimraf'; // Import async version
+
 // Load workspace data
 import data from '../package.json';
 
-const DIRS_TO_CLEAN = ['dist', 'out', 'node_modules', '.next', '.cache'];
+const DIRS_TO_CLEAN = ['dist', 'out', 'node_modules', '.cache'];
 const WORKSPACE = data.workspaces.map((ws: string) => ws.replace('/*', ''));
 
 WORKSPACE.push('.');
@@ -16,7 +18,13 @@ interface CleanDirInfo {
 }
 
 function findDirsToClean(baseDir: string, dir: string, dirsToClean: CleanDirInfo[], packageName: string = ''): void {
-	const files = fs.readdirSync(dir);
+	let files: string[];
+	try {
+		files = fs.readdirSync(dir);
+	} catch (error) {
+		console.error(`[CLEAN] Error reading directory ${dir}: ${error}`);
+		return; // Skip this directory if it cannot be read
+	}
 
 	// Try to find a package.json in the current directory first
 	let currentPackageName = packageName;
@@ -32,7 +40,15 @@ function findDirsToClean(baseDir: string, dir: string, dirsToClean: CleanDirInfo
 
 	for (const file of files) {
 		const fullPath = path.join(dir, file);
-		const isDirectory = fs.lstatSync(fullPath).isDirectory();
+		let isDirectory: boolean;
+
+		try {
+			isDirectory = fs.lstatSync(fullPath).isDirectory();
+		} catch (error) {
+			// Ignore errors like permission denied or file not found during check
+			// console.warn(`[CLEAN] Error checking path ${fullPath}: ${error}`);
+			continue; // Skip this entry if stat fails
+		}
 
 		if (isDirectory) {
 			// If currentPackageName is still empty, use the directory name as a fallback
@@ -57,8 +73,15 @@ function findDirsToClean(baseDir: string, dir: string, dirsToClean: CleanDirInfo
 	}
 }
 
+// Check for --dry-run flag
+const dryRun = process.argv.includes('--dry-run');
+
 (async () => {
-	console.log('[CLEAN] Clearing workspace...');
+	// Make IIFE async
+	console.log('[CLEAN] Starting workspace cleanup...');
+	if (dryRun) {
+		console.log('[CLEAN] DRY RUN active. No files will be deleted.');
+	}
 
 	const dirsToClean: CleanDirInfo[] = [];
 
@@ -72,20 +95,48 @@ function findDirsToClean(baseDir: string, dir: string, dirsToClean: CleanDirInfo
 	// Filter out entries with empty paths
 	const filteredDirsToClean = dirsToClean.filter((info) => info.paths.length > 0);
 
-	// Here you would delete the directories, e.g., using rimraf or fs.rmSync with { recursive: true }
-	filteredDirsToClean.forEach((info) => info.paths.forEach((dir) => fs.rmSync(dir, { recursive: true })));
+	if (dryRun) {
+		console.log('[CLEAN] Directories identified for deletion (Dry Run):');
+		filteredDirsToClean.forEach((info) => {
+			console.log(`  Package: ${info.name}`);
+			info.paths.forEach((dir) => {
+				console.log(`    - ${path.relative(process.cwd(), dir)}`); // Show relative path
+			});
+		});
+	} else {
+		console.log('[CLEAN] Removing identified directories...');
+		const deletionPromises = filteredDirsToClean.flatMap((info) =>
+			info.paths.map(async (dir) => {
+				try {
+					// console.log(`[CLEAN] Removing ${path.relative(process.cwd(), dir)} for package ${info.name}...`); // Optional: Log start
+					await rimraf(dir);
+					// console.log(`[CLEAN] Successfully removed ${path.relative(process.cwd(), dir)}`); // Optional: Log success
+				} catch (error) {
+					console.error(`[CLEAN] Failed to remove ${path.relative(process.cwd(), dir)}: ${error}`);
+				}
+			}),
+		);
+
+		await Promise.all(deletionPromises);
+		console.log('[CLEAN] Directory removal complete.');
+	}
 
 	// Run `bun pm cache rm` to clear the cache
 	console.log('[CLEAN] Clearing cache...');
 	const proc = Bun.spawnSync(['bun', 'pm', 'cache', 'rm']);
-	if (!proc.success) {
-		console.error(`Error clearing cache: ${proc.stdout || proc.stderr}`);
+	if (proc.exitCode !== 0) {
+		// Check exit code instead of success
+		// Log stderr for detailed error info
+		const stderr = proc.stderr ? proc.stderr.toString() : 'Unknown error';
+		console.error(`[CLEAN] Error clearing cache (exit code: ${proc.exitCode}): ${stderr}`);
 	}
 
 	console.log('[CLEAN] Clearing husky...');
 	const proc2 = Bun.spawnSync(['rm', '-rf', '.husky/_/']);
-	if (!proc2.success) {
-		console.error(`Error clearing cache: ${proc2.stdout || proc2.stderr}`);
+	if (proc2.exitCode !== 0) {
+		// Check exit code instead of success
+		const stderr = proc2.stderr ? proc2.stderr.toString() : 'Unknown error';
+		console.error(`[CLEAN] Error clearing husky (exit code: ${proc2.exitCode}): ${stderr}`);
 	}
 
 	console.log('[CLEAN] Completed.');

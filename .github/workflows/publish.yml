@@ -1,6 +1,14 @@
 name: Publish To Github
 run-name: Github Publish @aether-development/${{ inputs.package }}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ inputs.package }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: write
+
 on:
   workflow_dispatch:
     inputs:

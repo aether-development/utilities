@@ -1,5 +1,9 @@
 name: CI
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     branches:
@@ -7,26 +11,29 @@ on:
     paths:
       - 'packages/**'
       - 'package.json'
+      - '.github/workflows/continuous-integration.yml'
+      - '.github/workflows/reusable-lint.yml'
+      - '.github/workflows/reusable-prettier.yml'
+      - '.github/workflows/reusable-build.yml'
   pull_request:
+    branches:
+      - main
+    paths:
+      - 'packages/**'
+      - 'package.json'
+      - '.github/workflows/continuous-integration.yml'
+      - '.github/workflows/reusable-lint.yml'
+      - '.github/workflows/reusable-prettier.yml'
+      - '.github/workflows/reusable-build.yml'
 
 jobs:
   linting:
     name: Linting
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    uses: aether-development/.github/.github/workflows/reusable-lint.yml@main
 
-      - name: Install Dependencies
-        uses: aether-development/.github/actions/install-bun-dependencies@main
-        with:
-          bun-version: latest
-
-      - name: Build Prettier
-        run: bun run build
-
-      - name: Run ESLint
-        run: bun run lint
+  prettier:
+    name: Prettier Check
+    uses: aether-development/.github/.github/workflows/reusable-prettier.yml@main
 
   build:
     name: Building

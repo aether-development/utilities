@@ -11,7 +11,7 @@ const baseOptions: Options = {
 	minify: false,
 	skipNodeModulesBundle: true,
 	sourcemap: true,
-	target: 'esnext',
+	target: 'es2021',
 	tsconfig: relative(__dirname, resolveDir(process.cwd(), 'tsconfig.json')),
 	keepNames: true,
 	treeshake: true,

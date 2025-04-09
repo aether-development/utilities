@@ -1,15 +1,23 @@
 {
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"eslint.validate": ["typescript"],
 	"editor.tabSize": 4,
 	"editor.useTabStops": true,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
+	"editor.formatOnSave": true,
 	"files.eol": "\n",
 	"cSpell.words": ["aetherjs"],
 	"files.exclude": {
 		"**/node_modules": true,
-		"**/coverage": true,
-		"**/.turbo": true,
 		"**/.git": true
+	},
+	"files.associations": {
+		"tsconfig.json": "jsonc",
+		"tsconfig.eslint.json": "jsonc",
+		"tsconfig.docs.json": "jsonc"
 	}
 }

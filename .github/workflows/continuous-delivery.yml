@@ -1,8 +1,21 @@
 name: Continuous Delivery
 
+# Define permissions required for publishing to GitHub Packages
+permissions:
+  contents: read # To checkout the repository
+  packages: write # To push packages to GitHub Packages
+
 on:
   workflow_dispatch:
     inputs:
+      package:
+        description: The package to deploy (optional, deploys all if omitted)
+        required: false
+        type: choice
+        options:
+          - eslint-config
+          - prettier-config
+          - ts-config
       prNumber:
         description: The number of the PR that is being deployed
         required: false
@@ -21,25 +34,61 @@ on:
     branches:
       - main
     paths:
-      - 'packages/**'
+      # Trigger if either package changes, or the workflow itself changes
+      - 'packages/eslint-config/**'
+      - 'packages/prettier-config/**'
+      - 'packages/ts-config/**'
+      - '.github/workflows/continuous-delivery.yml'
+      - '.github/workflows/reusable-continuous-delivery.yml'
 
 jobs:
+  determine-packages:
+    name: Determine Packages to Publish
+    runs-on: ubuntu-latest
+    outputs:
+      packages_json: ${{ steps.determine.outputs.packages_json }}
+    steps:
+      - name: Determine Packages using Composite Action
+        id: determine
+        uses: aether-development/.github/.github/actions/determine-packages@main
+        with:
+          event_name: ${{ github.event_name }}
+          dispatch_package_input: ${{ github.event.inputs.package }}
+          # Define the package configuration as a multi-line YAML string
+          packages_config: |
+            packages:
+              eslint-config:
+                paths:
+                  - 'packages/eslint-config/**'
+              prettier-config:
+                paths:
+                  - 'packages/prettier-config/**'
+              ts-config:
+                paths:
+                  - 'packages/ts-config/**'
+            common_paths:
+              - '.github/workflows/continuous-delivery.yml'
+              - '.github/workflows/reusable-continuous-delivery.yml'
+
   Publish:
-    name: Publish Next to NPM Registry
-    uses: aether-development/.github/.github/workflows/reusable-continuous-delivery.yml@main
+    needs: determine-packages
+    if: needs.determine-packages.outputs.packages_json != '[]'
+    name: Publish Next ${{ matrix.package }} to NPM Registry
     strategy:
       fail-fast: false
       matrix:
-        package:
-          - eslint-config
-          - prettier-config
-          - ts-config
+        # Dynamically generate matrix from the JSON output of determine-packages job
+        package: ${{ fromJSON(needs.determine-packages.outputs.packages_json) }}
+
+    uses: aether-development/.github/.github/workflows/reusable-continuous-delivery.yml@main
     with:
       build: true
-      pr-number: ${{ github.event.inputs.prNumber }}
-      ref: ${{ github.event.inputs.ref }}
-      repository: ${{ github.event.inputs.repository }}
+      pr-number: ${{ github.event.inputs.prNumber }} # Pass dispatch input
+      # Determine ref/repo based on trigger event
+      ref: ${{ github.event_name == 'push' && github.ref_name || github.event.inputs.ref }}
+      repository: ${{ github.event_name == 'push' && github.repository || github.event.inputs.repository }}
+      # Use matrix value here - this is safe now that we're using the composite action
       working-directory: packages/${{ matrix.package }}
-      registry: 'npm'
+      registry: 'npm' # Kept original registry
     secrets:
-      NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }} # Kept original secret

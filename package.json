@@ -7,28 +7,32 @@
 	"type": "module",
 	"scripts": {
 		"build": "nx run-many --target=build --all",
-		"clean": "bun run scripts/clean.ts",
-		"format": "nx run @aetherjs/prettier-config:build && prettier --write .",
-		"lint": "nx run @aetherjs/eslint-config:build && eslint . --fix",
+		"clean": "bun run ./scripts/clean.ts",
+		"format": "nx run-many --target=format --all",
+		"format:check": "nx run-many --target=format:check --all",
+		"lint": "nx run-many --target=lint --all",
 		"prepare": "bun x husky",
-		"update": "bun npm-check-updates -p bun -u -ws -i -t latest"
+		"update": "bunx ncu -p bun -u -i -ws -t latest --format group"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^19.6.0",
-		"@commitlint/config-conventional": "^19.6.0",
-		"@favware/cliff-jumper": "^5.0.0",
+		"@commitlint/cli": "^19.8.0",
+		"@commitlint/config-conventional": "^19.8.0",
+		"@favware/cliff-jumper": "^6.0.0",
 		"@favware/npm-deprecate": "^2.0.0",
-		"@types/bun": "^1.1.14",
-		"bun-types": "^1.1.38",
+		"@types/bun": "^1.2.9",
+		"@types/node": "^22.14.0",
+		"@types/rimraf": "^4.0.5",
+		"bun-types": "^1.2.9",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^9.16.0",
+		"eslint": "^9.24.0",
 		"husky": "^9.1.7",
-		"lint-staged": "^15.2.10",
-		"npm-check-updates": "^17.1.11",
-		"nx": "20.2.0",
-		"prettier": "^3.4.2",
-		"tsup": "^8.3.5",
-		"typescript": "~5.7.2"
+		"lint-staged": "^15.5.0",
+		"npm-check-updates": "^17.1.16",
+		"nx": "20.7.2",
+		"prettier": "^3.5.3",
+		"rimraf": "^6.0.1",
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.3"
 	},
 	"repository": {
 		"type": "git",
@@ -42,5 +46,29 @@
 	"lint-staged": {
 		"*": "prettier --ignore-unknown --write"
 	},
-	"packageManager": "bun@1.1.38"
+	"packageManager": "bun@1.2.9",
+	"nx": {
+		"targets": {
+			"format": {
+				"executor": "nx:run-commands",
+				"dependsOn": [
+					"@aetherjs/prettier-config:build"
+				],
+				"options": {
+					"command": "prettier --write \"packages/**/*.{mjs,ts,js,json}\"",
+					"cwd": "{projectRoot}"
+				}
+			},
+			"format:check": {
+				"executor": "nx:run-commands",
+				"dependsOn": [
+					"@aetherjs/prettier-config:build"
+				],
+				"options": {
+					"command": "prettier --check \"packages/**/*.{mjs,ts,js,json}\"",
+					"cwd": "{projectRoot}"
+				}
+			}
+		}
+	}
 }
