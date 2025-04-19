@@ -19,15 +19,15 @@
 		"@commitlint/config-conventional": "^19.8.0",
 		"@favware/cliff-jumper": "^6.0.0",
 		"@favware/npm-deprecate": "^2.0.0",
-		"@types/bun": "^1.2.9",
-		"@types/node": "^22.14.0",
-		"bun-types": "^1.2.9",
+		"@types/bun": "^1.2.10",
+		"@types/node": "^22.14.1",
+		"bun-types": "^1.2.10",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^9.24.0",
+		"eslint": "^9.25.0",
 		"husky": "^9.1.7",
-		"lint-staged": "^15.5.0",
-		"npm-check-updates": "^17.1.16",
-		"nx": "20.7.2",
+		"lint-staged": "^15.5.1",
+		"npm-check-updates": "^17.1.18",
+		"nx": "20.8.0",
 		"prettier": "^3.5.3",
 		"rimraf": "^6.0.1",
 		"tsup": "^8.4.0",
@@ -45,7 +45,7 @@
 	"lint-staged": {
 		"*": "prettier --ignore-unknown --write"
 	},
-	"packageManager": "bun@1.2.9",
+	"packageManager": "bun@1.2.10",
 	"patchedDependencies": {
 		"@favware/cliff-jumper@6.0.0": "patches/@favware%2Fcliff-jumper@6.0.0.patch"
 	}

@@ -10,14 +10,13 @@
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true,
 	"files.eol": "\n",
-	"cSpell.words": ["aetherjs"],
+	"cSpell.words": ["aetherjs", "choosable"],
 	"files.exclude": {
-		"**/node_modules": false,
+		"**/node_modules": true,
 		"**/.git": true
 	},
 	"files.associations": {
 		"tsconfig.json": "jsonc",
 		"tsconfig.eslint.json": "jsonc",
-		"tsconfig.docs.json": "jsonc"
 	}
 }
