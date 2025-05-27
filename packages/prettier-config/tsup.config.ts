@@ -1,6 +1,6 @@
-import { Options } from 'tsup';
+import { Options } from "tsup";
 
-import { createTsupConfig } from '../../tsup.config';
+import { createTsupConfig } from "../../tsup.config";
 
 const options: Options = { dts: false, sourcemap: false };
 

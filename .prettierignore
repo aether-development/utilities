@@ -1,8 +1,0 @@
-CHANGELOG.md
-**/dist
-.nx
-bun.lockb
-yarn.lock
-
-/.nx/cache
-/.nx/workspace-data

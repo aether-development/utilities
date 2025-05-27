@@ -6,7 +6,7 @@ import { rimraf } from 'rimraf'; // Import async version
 // Load workspace data
 import data from '../package.json';
 
-const DIRS_TO_CLEAN = ['dist', 'out', 'node_modules', '.cache'];
+const DIRS_TO_CLEAN = ['dist', 'out', 'logs', 'node_modules', '.cache', '.next', '.turbo'];
 const WORKSPACE = data.workspaces.map((ws: string) => ws.replace('/*', ''));
 
 WORKSPACE.push('.');
@@ -127,16 +127,15 @@ const dryRun = process.argv.includes('--dry-run');
 	if (proc.exitCode !== 0) {
 		// Check exit code instead of success
 		// Log stderr for detailed error info
-		const stderr = proc.stderr ? proc.stderr.toString() : 'Unknown error';
+		const stderr = proc.stderr ? Buffer.from(proc.stderr).toString() : 'Unknown error';
 		console.error(`[CLEAN] Error clearing cache (exit code: ${proc.exitCode}): ${stderr}`);
 	}
 
-	console.log('[CLEAN] Clearing husky...');
-	const proc2 = Bun.spawnSync(['rm', '-rf', '.husky/_/']);
-	if (proc2.exitCode !== 0) {
-		// Check exit code instead of success
-		const stderr = proc2.stderr ? proc2.stderr.toString() : 'Unknown error';
-		console.error(`[CLEAN] Error clearing husky (exit code: ${proc2.exitCode}): ${stderr}`);
+	console.log('[CLEAN] Clearing turbo...');
+	const proc3 = Bun.spawnSync(['rm', '-rf', '.turbo']);
+	if (proc3.exitCode !== 0) {
+		const stderr = proc3.stderr ? Buffer.from(proc3.stderr).toString() : 'Unknown error';
+		console.error(`[CLEAN] Error clearing turbo (exit code: ${proc3.exitCode}): ${stderr}`);
 	}
 
 	console.log('[CLEAN] Completed.');

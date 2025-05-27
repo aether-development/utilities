@@ -1,3 +1,11 @@
 {
-	"recommendations": ["bierner.github-markdown-preview", "dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+	"recommendations": [
+		// Biome
+		"biomejs.biome",
+		// Path Intellisense
+		"christian-kohler.path-intellisense",
+		// Themes
+		"kuscamara.electron",
+		"vscode-icons-team.vscode-icons"
+	]
 }

@@ -1,22 +1,21 @@
 {
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
+		"source.organizeImports.biome": "explicit",
+		"source.fixAll.biome": "explicit"
 	},
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"eslint.validate": ["typescript"],
 	"editor.tabSize": 4,
 	"editor.useTabStops": true,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
-	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
 	"files.eol": "\n",
-	"cSpell.words": ["aetherjs", "choosable"],
 	"files.exclude": {
 		"**/node_modules": true,
-		"**/.git": true
+		"**/.git": true,
+		"**/.turbo": true,
+		"**/.next": true
 	},
 	"files.associations": {
-		"tsconfig.json": "jsonc",
-		"tsconfig.eslint.json": "jsonc",
+		"tsconfig.json": "jsonc"
 	}
 }

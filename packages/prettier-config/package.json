@@ -22,10 +22,6 @@
 		"prettier": "^3.5.3",
 		"prettier-plugin-packagejson": "^2.5.10"
 	},
-	"devDependencies": {
-		"@favware/cliff-jumper": "^6.0.0",
-		"typescript": "^5.8.3"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/aether-development/utilities.git",
@@ -43,25 +39,5 @@
 		"bun",
 		"aetherjs",
 		"standalone"
-	],
-	"files": [
-		"dist/"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"nx": {
-		"targets": {
-			"lint": {
-				"executor": "nx:run-commands",
-				"dependsOn": [
-					"@aetherjs/eslint-config:build"
-				],
-				"options": {
-					"command": "eslint src --fix",
-					"cwd": "{projectRoot}"
-				}
-			}
-		}
-	}
+	]
 }

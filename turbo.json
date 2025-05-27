@@ -1,0 +1,21 @@
+{
+	"$schema": "https://turborepo.com/schema.json",
+	"ui": "tui",
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"]
+		},
+		"format": {
+			"outputLogs": "new-only"
+		},
+		"format:check": {
+			"outputLogs": "new-only"
+		},
+		"lint": {
+			"outputLogs": "new-only"
+		},
+		"lint:check": {
+			"outputLogs": "new-only"
+		}
+	}
+}

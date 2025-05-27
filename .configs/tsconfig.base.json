@@ -1,0 +1,8 @@
+{
+	"extends": [
+		"../packages/ts-config/src/base.json",
+		"../packages/ts-config/src/extra-strict.json",
+		"../packages/ts-config/src/bundler.json",
+		"../packages/ts-config/src/verbatim.json"
+	]
+}

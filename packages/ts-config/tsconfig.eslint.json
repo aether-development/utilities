@@ -1,8 +1,0 @@
-{
-	"extends": "src/base.json",
-	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true
-	},
-	"include": ["scripts"]
-}
