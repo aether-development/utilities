@@ -1,20 +1,26 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# Ignore a blackhole and the folder for development
+# Dependencies
 node_modules/
-.nx/
+
+# Vercel
+.vercel/
+.turbo/
+
+# Production
+build/
+dist/
 
 # misc
 .DS_Store
+Thumbs.db
+
+# Local env
+.env
 .env.local
 .env.development.local
-.env.test.local
 .env.production.local
+.env.test.local
+!.env.example
 
-# Build Artifacts
-dist/
-build/
-docs/
 
 *.tsbuildinfo
 *.zip
@@ -27,7 +33,5 @@ docs/
 # Ignore log files
 *.log
 
-# Ignore package locks
-package-lock.json
-
-.env
+# Old
+.old/

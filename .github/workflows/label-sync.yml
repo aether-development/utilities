@@ -4,10 +4,11 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# Define permissions required for syncing labels
 permissions:
-  contents: read
-  issues: write
-  pull-requests: write
+  contents: read # To checkout the repository
+  issues: write # To read/write labels on issues
+  pull-requests: write # To read/write labels on pull requests
 
 on:
   schedule:

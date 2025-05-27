@@ -11,9 +11,9 @@
 	"files.eol": "\n",
 	"files.exclude": {
 		"**/node_modules": true,
-		"**/.git": true,
 		"**/.turbo": true,
-		"**/.next": true
+		"**/.next": true,
+		"**/.git": true
 	},
 	"files.associations": {
 		"tsconfig.json": "jsonc"
