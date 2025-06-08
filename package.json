@@ -15,7 +15,7 @@
 		"update": "bunx ncu -p bun -u -i -ws -t latest --format group"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.0.0-beta.5",
+		"@biomejs/biome": "2.0.0-beta.6",
 		"@types/bun": "^1.2.14",
 		"@types/node": "^22.15.21",
 		"@types/semver": "^7.7.0",
