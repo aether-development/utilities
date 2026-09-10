@@ -15,7 +15,7 @@
 		"update": "bunx ncu -p bun -u -i -ws -t latest --format group"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.0.0-beta.5",
+		"@biomejs/biome": "2.5.13",
 		"@types/bun": "^1.2.14",
 		"@types/node": "^22.15.21",
 		"@types/semver": "^7.7.0",
@@ -39,7 +39,7 @@
 			"@commitlint/config-conventional"
 		]
 	},
-	"packageManager": "bun@1.2.14",
+	"packageManager": "bun@1.4.2",
 	"patchedDependencies": {
 		"@favware/cliff-jumper@6.0.0": "patches/@favware%2Fcliff-jumper@6.0.0.patch"
 	}
